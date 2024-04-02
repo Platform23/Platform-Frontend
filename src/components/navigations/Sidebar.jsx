@@ -1,4 +1,4 @@
-import { logo1 } from '../../assets/images';
+import { logo } from '../../assets/images';
 import { FiLogOut } from "react-icons/fi";
 import { TiHome } from "react-icons/ti";
 import { FaUsers } from "react-icons/fa";
@@ -60,7 +60,7 @@ const Sidebar = () => {
                 <div className="flex flex-col h-full">
                     <div className='h-20 flex items-center px-8'>
                         <a href='' className='flex-none'>
-                            <img src={logo1} width={140} className="mx-auto" />
+                            <img src={logo} width={140} className="mx-auto" />
                         </a>
                     </div>
 

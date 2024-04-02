@@ -1,4 +1,3 @@
-import logo1 from './logo1.png';
-import logo2 from './logo2.png';
+import logo from './logo.png';
 
-export {logo1, logo2}
+export {logo}
