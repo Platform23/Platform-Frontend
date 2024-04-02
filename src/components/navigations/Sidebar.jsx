@@ -29,7 +29,7 @@ const navsFooter = [
 
 const Sidebar = () => {
     const { setPage, page } = useNavStore();
-    const { isOpen, setIsOpen } = useDrawerStore();
+    const { setIsOpen } = useDrawerStore();
     const nagivate = useNavigate();
 
     const handleClick = (item) => {
@@ -37,12 +37,16 @@ const Sidebar = () => {
         nagivate(item.href);
     };
 
+    const handleSidebarToggle = () => {
+        setIsOpen();
+    };
+
     return (
         <section>
             <button
                 type="button"
                 className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-primary rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-20"
-                onClick={() => setIsOpen()}
+                onClick={handleSidebarToggle}
             >
                 <span className="sr-only">Open sidebar</span>
                 <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +55,7 @@ const Sidebar = () => {
             </button>
 
             <nav
-                className="fixed top-0 left-0 z-40 w-56 h-screen transition-transform -translate-x-full sm:translate-x-0 border-r text-primary font-roboto"
+                className="fixed bg-white top-0 left-0 z-40 w-56 h-screen transition-transform -translate-x-full sm:translate-x-0 border-r text-primary font-roboto"
             >
                 <div className="flex flex-col h-full">
                     <div className='h-20 flex items-center px-8'>
