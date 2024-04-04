@@ -27,7 +27,7 @@ const NoNetworkCard = () => {
 
             <button
                 type="button"
-                className="text-white bg-primary hover:bg-gray-700 focus:outline-nonefont-medium rounded-lg text-sm px-3 py-1.5 me-2 text-center inline-flex items-center"
+                className="text-white bg-primary hover:bg-gray-700 focus:outline-none font-medium rounded-lg text-sm px-3 py-1.5 me-2 text-center inline-flex items-center"
                 onClick={handleClick}
             >
                 <svg className="me-2 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 14">
