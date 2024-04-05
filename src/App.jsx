@@ -8,6 +8,7 @@ function App() {
     <>
       <Routes>
         <Route path='connexion' element={<Sign_in />} />
+        <Route path='inscription' element={<Sign_up />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path='reseaux' element={<Network />} />
