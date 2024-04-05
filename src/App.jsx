@@ -2,6 +2,12 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Network from './pages/Network';
 import Layout from './Layout';
+import Sign_in from './pages/Sign_in'
+import Sign_up from './pages/Sign_up'
+import ForgotPassword from './pages/ForgotPassword'
+import ForgotPasswordConfirm from './pages/ForgotPassConfirm'
+import Profile from './pages/Profile'
+
 
 function App() {
   return (
