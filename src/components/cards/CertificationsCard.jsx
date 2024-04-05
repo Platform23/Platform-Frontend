@@ -20,8 +20,8 @@ const CertificationsCard = () =>{
                     </h2>
                     <button onClick={handleOpen} className="justify-end">
                         <MdEdit className="w-6 h-6 text-primary"/>
-                        <CertificationsDialog open={isOpen} handleOpen={handleOpen}/>
                     </button>
+                    <CertificationsDialog open={isOpen} handleOpen={handleOpen}/>
                 </div>
             </div>
         </div>

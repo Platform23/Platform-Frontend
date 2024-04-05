@@ -27,7 +27,7 @@ const Sign_up = () => {
                         <form className="mt-6" action="#" method="POST">
                             {/* <TextInput placeholder="Entrer le code" /> */}
 
-                            <TextInput placeholder="Nom complet" />
+                            <TextInput placeholder="Nom d'utilisateur" />
 
                             <TextInput placeholder="Adresse e-mail" />
 

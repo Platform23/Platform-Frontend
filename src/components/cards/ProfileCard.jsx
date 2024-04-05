@@ -45,7 +45,7 @@ const ProfileCard = () =>{
             {/* User personal information */}
             <div className="text-center">
                 <h3 className="text-3xl font-semibold leading-normal mb-2 text-primary">
-                    {Profile.user.fullName}
+                    {Profile.user.username}
                 </h3>
                 <div className="text-lg leading-normal mb-2 text-primary font-bold">
                     <i className="fas fa-map-marker-alt mr-2 text-lg text-gray-500"></i>{" "}

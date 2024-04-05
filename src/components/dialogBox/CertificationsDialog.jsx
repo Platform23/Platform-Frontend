@@ -9,21 +9,17 @@ import {
     Input,
     Checkbox,
   } from "@material-tailwind/react";
-import { useState } from "react"
 
 
   const CertificationsDialog = ({open, handleOpen}) =>{
-    // const [open, setOpen] = useState(false);
-
-    // const handleOpen = () => setOpen(!open);
 
     return(
         <>
             <Dialog
-                size="xs"
+                size="md"
                 open={open}
                 handler={handleOpen}
-                className="bg-transparent shadow-none"
+                className="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50"
             >
                 <Card className="mx-auto w-full max-w-[24rem]">
                 <CardBody className="flex flex-col gap-4">

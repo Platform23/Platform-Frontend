@@ -1,7 +1,7 @@
 export const Profile = {
     user:{
         code: "A2x9B4cR7d",
-        fullName: "Jane Doe",
+        username: "jdoe",
         birthDate: "",
         email: "johndoe@gmail.com",
         skills: [],

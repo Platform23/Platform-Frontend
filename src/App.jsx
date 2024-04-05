@@ -7,6 +7,7 @@ import Sign_up from './pages/Sign_up'
 import ForgotPassword from './pages/ForgotPassword'
 import ForgotPasswordConfirm from './pages/ForgotPassConfirm'
 import Profile from './pages/Profile'
+import CertificationsDialog from './components/dialogBox/CertificationsDialog';
 
 
 function App() {
