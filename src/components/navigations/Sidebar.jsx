@@ -21,7 +21,7 @@ const navigation = [
 
 const navsFooter = [
     {
-        href: '',
+        href: 'connexion',
         name: 'Déconnexion',
         icon: <FiLogOut size={24} />
     }
@@ -88,7 +88,7 @@ const Sidebar = () => {
                             <div>
                                 <span className="block text-sm font-semibold">Jane Doe</span>
                                 <a
-                                    href=""
+                                    href="profil"
                                     className="block mt-px text-light-gray hover:text-primary text-xs"
                                 >
                                     Voir le profil

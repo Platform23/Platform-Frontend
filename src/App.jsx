@@ -14,6 +14,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path='reseaux' element={<Network />} />
+          <Route path='profil' element={<Profile />} />
         </Route>
       </Routes>
     </>
