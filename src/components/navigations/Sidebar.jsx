@@ -28,12 +28,12 @@ const navsFooter = [
 ]
 
 const Sidebar = () => {
-    const { setPage, page } = useNavStore();
+    const { setTitle, title } = useNavStore();
     // const { setIsOpen } = useDrawerStore();
     const nagivate = useNavigate();
 
     const handleClick = (item) => {
-        setPage(item.name);
+        setTitle(item.name);
         nagivate(item.href);
     };
 
@@ -50,13 +50,13 @@ const Sidebar = () => {
             </div>
 
             <nav className="flex flex-col flex-1 overflow-y-auto px-2 py-4">
-                <ul className="px-4 text-sm font-medium flex-1 gap-2">
+                <ul className="px-4 font-roboto text-base font-medium leading-relaxed text-inherit flex-1 gap-2">
                     {
                         navigation.map((item, idx) => (
                             <li
                                 key={idx}
                                 onClick={() => handleClick(item)}
-                                className={item.name === page ? 'rounded-lg bg-aqua' : ''}
+                                className={item.name === title ? 'rounded-lg bg-aqua' : ''}
                             >
                                 <div
                                     className="flex items-center gap-x-2 p-2 mt-1 rounded-lg hover:bg-aqua active:bg-aqua duration-150 cursor-pointer">
@@ -69,7 +69,7 @@ const Sidebar = () => {
                 </ul>
 
                 <div>
-                    <ul className="px-4 pb-4 text-sm font-medium">
+                    <ul className="px-4 pb-4 font-roboto text-base font-medium leading-relaxed text-inherit">
                         {
                             navsFooter.map((item, idx) => (
                                 <li key={idx}>
@@ -85,8 +85,8 @@ const Sidebar = () => {
                     <div className="py-4 px-4 border-t">
                         <div className="flex items-center gap-x-4">
                             <img src="https://api.dicebear.com/8.x/adventurer/svg?seed=JaneDoe" className="w-12 h-12 rounded-full" />
-                            <div>
-                                <span className="block text-sm font-semibold">Jane Doe</span>
+                            <div className="font-roboto text-base font-medium leading-relaxed text-inherit">
+                                <span className="block">Jane Doe</span>
                                 <a
                                     href=""
                                     className="block mt-px text-light-gray hover:text-primary text-xs"

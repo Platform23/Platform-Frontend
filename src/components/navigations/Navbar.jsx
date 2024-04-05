@@ -1,7 +1,7 @@
 import useNavStore from '../../store/navStore';
 
 const Navbar = () => {
-    const { page } = useNavStore();
+    const { title } = useNavStore();
 
     return (
         <div className="fixed w-full z-10 flex items-center justify-between h-20 bg-white text-primary border-b border-gray-200">
@@ -16,7 +16,7 @@ const Navbar = () => {
 
                 <h3
                     className='text-xl font-roboto font-semibold pl-5'>
-                    {page}
+                    {title}
                 </h3>
             </div>
         </div>

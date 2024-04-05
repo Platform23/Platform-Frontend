@@ -1,8 +1,8 @@
 import { create } from "zustand";
 
 const useNavStore = create((set) => ({
-    page: "Accueil",
-    setPage: (newPage) => set({ page: newPage }) 
+    title: "Accueil",
+    setTitle: (newTitle) => set({ title: newTitle }) 
 }));
 
 export default useNavStore;

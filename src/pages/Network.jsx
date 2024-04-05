@@ -44,7 +44,7 @@ const Network = () => {
 
                 <div className="inline-block">
                     <button
-                        className="flex items-center gap-2 px-4 py-2 font-sans text-xs font-bold text-center text-aqua bg-primary hover:bg-gray-700  uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-non"
+                        className="flex items-center gap-2 px-4 py-2 font-sans text-xs font-bold text-center text-aqua bg-primary hover:bg-gray-700 uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-non"
                         type="button">
                         Soumettre
                     </button>
