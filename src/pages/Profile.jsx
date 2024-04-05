@@ -1,6 +1,7 @@
 import Banner from "../components/profile/Banner"
-import ProfileCard from "../components/profile/ProfileCard"
+import ProfileCard from "../components/cards/ProfileCard"
 import { MdEdit } from "react-icons/md";
+import CertificationsCard from "../components/cards/CertificationsCard";
 
 const Profile = () =>{
     return(
@@ -16,16 +17,7 @@ const Profile = () =>{
                         <div className="px-6">
                             <ProfileCard />
 
-                            <div className="my-5 py-10 shadow-xl border-2 rounded-lg border-bggray">
-                                <div className="flex flex-wrap">
-                                    <div className="flex justify-between mb-4 w-full lg:w-9/12 px-4">
-                                        <h2 className="mb-4 text-lg leading-relaxed text-primary font-bold font-montserrat">
-                                            Formations & Certifications
-                                        </h2>
-                                        <MdEdit className="w-6 h-6 text-primary"/>
-                                    </div>
-                                </div>
-                            </div>
+                            <CertificationsCard/>
 
                             <div className="my-5 py-10 shadow-xl border-2 rounded-lg border-bggray">
                                 <div className="flex flex-wrap">
