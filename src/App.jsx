@@ -9,6 +9,8 @@ function App() {
       <Routes>
         <Route path='connexion' element={<Sign_in />} />
         <Route path='inscription' element={<Sign_up />} />
+        <Route path='mot_de_passe_oublie' element={<ForgotPassword />} />
+        <Route path='mot_de_passe_oublie_confirmation' element={<ForgotPasswordConfirm />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path='reseaux' element={<Network />} />
