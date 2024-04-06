@@ -2,66 +2,61 @@ import {
     Button,
     Dialog,
     Card,
-    CardHeader,
     CardBody,
     CardFooter,
     Typography,
     Input,
-    Checkbox,
   } from "@material-tailwind/react";
+import DatePickerInput from "../inputs/DatePickerInput";
+ 
 
 
   const CertificationsDialog = ({open, handleOpen}) =>{
+    
 
     return(
         <>
             <Dialog
-                size="md"
+                size="lg"
                 open={open}
                 handler={handleOpen}
                 className="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50"
             >
-                <Card className="mx-auto w-full max-w-[24rem]">
+                <Card className="mx-auto w-full max-w-[30rem]">
                 <CardBody className="flex flex-col gap-4">
-                    <Typography variant="h4" color="blue-gray">
-                    Sign In
+                    <Typography variant="h4" className="text-primary font-semibold">
+                        Formations
                     </Typography>
-                    <Typography
-                    className="mb-3 font-normal"
-                    variant="paragraph"
-                    color="gray"
-                    >
-                    Enter your email and password to Sign In.
-                    </Typography>
+                    
                     <Typography className="-mb-2" variant="h6">
-                    Your Email
+                        Titre
                     </Typography>
-                    <Input label="Email" size="lg" />
+                    <Input placeholder="Certifications..." size="lg" className="rounded-lg border-3 border-primary focus:border-2" required/>
+                    
                     <Typography className="-mb-2" variant="h6">
-                    Your Password
+                        Organisation
                     </Typography>
-                    <Input label="Password" size="lg" />
-                    <div className="-ml-2.5 -mt-3">
-                    <Checkbox label="Remember Me" />
-                    </div>
+                    <Input placeholder="Microsoft" size="lg" className="rounded-lg border-3 border-primary focus:border-2" required/>
+                    
+                    <Typography className="-mb-2" variant="h6">
+                        Lien
+                    </Typography>
+                    <Input size="lg" className="rounded-lg border-3 border-primary focus:border-2" />
+
+                    <Typography className="-mb-2" variant="h6">
+                        Date
+                    </Typography>
+                    <DatePickerInput/>
+
                 </CardBody>
-                <CardFooter className="pt-0">
-                    <Button variant="gradient" onClick={handleOpen} fullWidth>
-                    Sign In
+                <CardFooter className="pt-0 justify-end items-end">
+                    <Button variant="gradient" onClick={handleOpen} className="bg-primary text-white font-bold font-montserrat items-end mx-1" >
+                        Sauvegarder
                     </Button>
-                    <Typography variant="small" className="mt-4 flex justify-center">
-                    Don&apos;t have an account?
-                    <Typography
-                        as="a"
-                        href="#signup"
-                        variant="small"
-                        color="blue-gray"
-                        className="ml-1 font-bold"
-                        onClick={handleOpen}
-                    >
-                        Sign up
-                    </Typography>
-                    </Typography>
+                    <Button variant="gradient" onClick={handleOpen} className="bg-light-gray text-white font-bold font-montserrat items-end mx-1" >
+                        Annuler
+                    </Button>
+                    
                 </CardFooter>
                 </Card>
             </Dialog>
