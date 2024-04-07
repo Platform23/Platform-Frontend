@@ -8,7 +8,18 @@ const DatePickerInput = () => {
   const handleChange = (date) => setSelectedDate(date);
 
   return (
-    <DatePicker selected={selectedDate} onChange={handleChange} className="rounded-lg border-3 border-primary focus:border-1"/>
+    <div className="rounded-lg border-3 border-primary focus:border-2">
+        <DatePicker 
+          selected={selectedDate} 
+          onChange={handleChange} 
+          showIcon
+          isClearable
+          placeholderText="Select a date" 
+          showMonthYearPicker
+          dateFormat="MM/yyyy"
+          className="red-border"
+        />
+    </div>
   );
 };
 
