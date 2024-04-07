@@ -7,10 +7,11 @@ import {
     Typography,
     Input,
   } from "@material-tailwind/react";
+import DatePickerInput from "../inputs/DatePickerInput";
  
 
 
-  const UpdateProfileDialog = ({open, handleOpen}) =>{
+  const InterestsDialog = ({open, handleOpen}) =>{
     
 
     return(
@@ -24,29 +25,24 @@ import {
                 <Card className="mx-auto w-full max-w-[30rem]">
                 <CardBody className="flex flex-col gap-4">
                     <Typography variant="h4" className="text-primary font-semibold">
-                        Editer profil
+                        Préférences
                     </Typography>
                     
                     <Typography className="-mb-2" variant="h6">
-                        Nom d'utilisateur
+                        Ajouter une préférence
                     </Typography>
-                    <Input placeholder="jdoe" size="lg" className="rounded-lg border-3 border-primary focus:border-2" required/>
+                    <Input placeholder="Intelligence Artiicielle" size="lg" className="rounded-lg border-3 border-primary focus:border-2" required/>
                     
                     <Typography className="-mb-2" variant="h6">
-                        Profession
+                        Préférences
                     </Typography>
-                    <Input placeholder="Manager" size="lg" className="rounded-lg border-3 border-primary focus:border-2" required/>
-                    
-                    <Typography className="-mb-2" variant="h6">
-                        Photo de profil
-                    </Typography>
-                    <Input size="lg" type="file" className="rounded-lg border-3 border-primary focus:border-2" />
 
-                    <Typography className="-mb-2" variant="h6">
-                        Arrière plan
-                    </Typography>
-                    <Input size="lg" type="file" className="rounded-lg border-3 border-primary focus:border-2" />
-
+                    <Input 
+                        size="lg" 
+                        className="rounded-lg bg-secondary h-60" 
+                        readOnly
+                    />
+                    
                 </CardBody>
                 <CardFooter className="pt-0 justify-end items-end">
                     <Button variant="gradient" onClick={handleOpen} className="bg-primary text-white font-bold font-montserrat items-end mx-1" >
@@ -55,6 +51,7 @@ import {
                     <Button variant="gradient" onClick={handleOpen} className="bg-light-gray text-white font-bold font-montserrat items-end mx-1" >
                         Annuler
                     </Button>
+                    
                 </CardFooter>
                 </Card>
             </Dialog>
@@ -63,4 +60,4 @@ import {
     )
   }
 
-  export default UpdateProfileDialog
+  export default InterestsDialog
