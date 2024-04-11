@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import useNavStore from '../store/navStore';
 import { useEffect } from "react";
 import NetworkDetailBar from "../components/navigations/NetworkDetailBar";
-import Chat from "../components/sections/Chat";
+import Chat from "../components/chat/Chat";
 
 const NetworkDetail = () => {
     const { name } = useParams();
@@ -34,7 +34,7 @@ const NetworkDetail = () => {
                 </div>
                 :
                 <div className="h-screen flex">
-                    <div className="pt-24 pl-4">
+                    <div className="flex-1 pt-24 mr-64">
                         <Chat />
                     </div>
 
