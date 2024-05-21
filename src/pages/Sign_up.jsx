@@ -14,7 +14,7 @@ const Sign_up = () => {
 
     return (
         <main className='relative'>
-            <section className="flex flex-col md:flex-row h-screen items-center">
+            <section className=" flex flex-col md:flex-row h-screen items-center">
                 <div className="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12 flex items-center justify-center">
 
                     <div className="w-full h-100 py-5">
@@ -37,7 +37,7 @@ const Sign_up = () => {
 
                             <TermsOfUse agree={agree} setAgree={setAgree}/>
 
-                            <SignUpButton agree={agree} label="Inscription" handleClick={() => { navigate('/') }} />
+                            <SignUpButton agree={agree} label="Inscription" handleClick={() => { navigate('/formulaire') }} />
                         </form>
 
                         <p className="mt-8 text-center text-lg font-semibold">Vous avez déjà un compte?<Link to="/connexion" className="text-primary font-bold"> Se connecter</Link></p>

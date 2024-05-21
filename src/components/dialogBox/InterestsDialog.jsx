@@ -29,7 +29,7 @@ import DatePickerInput from "../inputs/DatePickerInput";
                     </Typography>
                     
                     <Typography className="-mb-2" variant="h6">
-                        Ajouter une préférence
+                        Ajouter une préférence*
                     </Typography>
                     <Input placeholder="Intelligence Artiicielle" size="lg" className="rounded-lg border-3 border-primary focus:border-2" required/>
                     

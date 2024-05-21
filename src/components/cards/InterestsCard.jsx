@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { MdEdit } from "react-icons/md";
+import { MdAdd } from "react-icons/md";
 import InterestsDialog from "../dialogBox/InterestsDialog";
 
 const InterestsCard =() =>{
@@ -18,7 +19,7 @@ const InterestsCard =() =>{
                         Préférences
                     </h2>
                     <button onClick={handleOpen} className="justify-end">
-                        <MdEdit className="w-6 h-6 text-primary"/>
+                        <MdAdd className="w-6 h-6 text-primary"/>
                     </button>
                     <InterestsDialog open={isOpen} handleOpen={handleOpen}/>
                 </div>

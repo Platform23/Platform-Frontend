@@ -11,7 +11,7 @@ import DatePickerInput from "../inputs/DatePickerInput";
  
 
 
-  const CertificationsDialog = ({open, handleOpen}) =>{
+  const ExperienceDialog = ({open, handleOpen}) =>{
     
 
     return(
@@ -25,26 +25,31 @@ import DatePickerInput from "../inputs/DatePickerInput";
                 <Card className="mx-auto w-full max-w-[30rem]">
                 <CardBody className="flex flex-col gap-4">
                     <Typography variant="h4" className="text-primary font-semibold">
-                        Formations
+                        Ajouter expérience
                     </Typography>
                     
                     <Typography className="-mb-2" variant="h6">
-                        Titre
+                        Titre*
                     </Typography>
                     <Input placeholder="Certifications..." size="lg" className="rounded-lg border-3 border-primary focus:border-2" required/>
                     
                     <Typography className="-mb-2" variant="h6">
-                        Organisation
+                        Organisation*
                     </Typography>
                     <Input placeholder="Microsoft" size="lg" className="rounded-lg border-3 border-primary focus:border-2" required/>
                     
-                    <Typography className="-mb-2" variant="h6">
+                    {/* <Typography className="-mb-2" variant="h6">
                         Lien
                     </Typography>
-                    <Input size="lg" className="rounded-lg border-3 border-primary focus:border-2" />
+                    <Input size="lg" className="rounded-lg border-3 border-primary focus:border-2" /> */}
+
+                    <Typography className="-mb-2" variant="h6" required>
+                        Date de debut*
+                    </Typography>
+                    <DatePickerInput/>
 
                     <Typography className="-mb-2" variant="h6">
-                        Date
+                        Date de fin
                     </Typography>
                     <DatePickerInput/>
 
@@ -65,4 +70,4 @@ import DatePickerInput from "../inputs/DatePickerInput";
     )
   }
 
-  export default CertificationsDialog
+  export default ExperienceDialog

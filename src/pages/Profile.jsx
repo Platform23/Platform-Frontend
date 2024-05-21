@@ -1,7 +1,7 @@
 import Banner from "../components/profile/Banner"
 import ProfileCard from "../components/cards/ProfileCard"
 import { MdEdit } from "react-icons/md";
-import CertificationsCard from "../components/cards/CertificationsCard";
+import ExperienceCard from "../components/cards/ExperienceCard";
 import InterestsCard from "../components/cards/InterestsCard";
 
 const Profile = () =>{
@@ -18,7 +18,7 @@ const Profile = () =>{
                         <div className="px-6">
                             <ProfileCard />
 
-                            <CertificationsCard/>
+                            <ExperienceCard/>
 
                             <InterestsCard/>
                         </div>
