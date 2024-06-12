@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import PasswordInput from '../components/inputs/PasswordInput';
 import TextInput from '../components/inputs/TextInput';
 import TermsOfUse from '../components/buttons/TermsOfUse';
+import DropdownInput from '../components/inputs/DropdownInput';
 import { useState } from "react"
 
 
@@ -35,7 +36,15 @@ const Sign_up = () => {
 
                             <PasswordInput placeholder='Confirmez le mot de passe' />
 
+                            <DropdownInput placeholder=' Compétences clés'/>
+
+                            <DropdownInput placeholder=' Profil communautaire numérique'/>
+
+                            <DropdownInput placeholder=" Organisation numérique d'appartenance"/>
+
+
                             <TermsOfUse agree={agree} setAgree={setAgree}/>
+
 
                             <SignUpButton agree={agree} label="Inscription" handleClick={() => { navigate('/formulaire') }} />
                         </form>

@@ -18,11 +18,11 @@ const NoNetworkCard = () => {
                 </svg>
 
                 <span className="sr-only">Info</span>
-                <h3 className="text-lg font-semibold">Aucun réseau</h3>
+                <h3 className="text-lg font-semibold">Bienvenue</h3>
             </div>
 
             <div className="mt-2 mb-4 text-sm">
-                Vous n'êtes membre d'aucun réseau. Rejoignez un réseau pour participer.
+            Bienvenue dans Platform, verifiez votre email.
             </div>
 
             <button
