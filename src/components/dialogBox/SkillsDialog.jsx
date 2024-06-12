@@ -11,7 +11,7 @@ import DatePickerInput from "../inputs/DatePickerInput";
  
 
 
-  const InterestsDialog = ({open, handleOpen}) =>{
+  const SkillsDialog = ({open, handleOpen}) =>{
     
 
     return(
@@ -25,16 +25,16 @@ import DatePickerInput from "../inputs/DatePickerInput";
                 <Card className="mx-auto w-full max-w-[30rem]">
                 <CardBody className="flex flex-col gap-4">
                     <Typography variant="h4" className="text-primary font-semibold">
-                        Préférences
+                        Compétences clés
                     </Typography>
                     
                     <Typography className="-mb-2" variant="h6">
-                        Ajouter une préférence*
+                        Ajouter une compétence*
                     </Typography>
                     <Input placeholder="Intelligence Artiicielle" size="lg" className="rounded-lg border-3 border-primary focus:border-2" required/>
                     
                     <Typography className="-mb-2" variant="h6">
-                        Préférences
+                        Compétences
                     </Typography>
 
                     <Input 
@@ -60,4 +60,4 @@ import DatePickerInput from "../inputs/DatePickerInput";
     )
   }
 
-  export default InterestsDialog
+  export default SkillsDialog

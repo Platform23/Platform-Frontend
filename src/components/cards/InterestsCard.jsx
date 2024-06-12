@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { MdEdit } from "react-icons/md";
 import { MdAdd } from "react-icons/md";
-import InterestsDialog from "../dialogBox/InterestsDialog";
+import SkillsDialog from "../dialogBox/SkillsDialog";
 
 const InterestsCard =() =>{
 
@@ -16,12 +16,12 @@ const InterestsCard =() =>{
             <div className="flex flex-wrap">
                 <div className="flex justify-between mb-4 w-full lg:w-9/12 px-4">
                     <h2 className="mb-4 text-lg leading-relaxed text-primary font-bold font-montserrat">
-                        Préférences
+                        Compétences clés
                     </h2>
                     <button onClick={handleOpen} className="justify-end">
                         <MdAdd className="w-6 h-6 text-primary"/>
                     </button>
-                    <InterestsDialog open={isOpen} handleOpen={handleOpen}/>
+                    <SkillsDialog open={isOpen} handleOpen={handleOpen}/>
                 </div>
             </div>
         </div>
