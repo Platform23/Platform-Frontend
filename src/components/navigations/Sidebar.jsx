@@ -27,6 +27,7 @@ const navsFooter = [
     }
 ]
 
+
 const Sidebar = () => {
     const { setPage, page } = useNavStore();
     // const { setIsOpen } = useDrawerStore();

@@ -1,14 +1,5 @@
-import { useNavigate } from "react-router-dom";
-import useNavStore from '../../store/navStore';
 
 const WelcomeCard = () => {
-    const navigate = useNavigate();
-    const { setPage } = useNavStore();
-
-    const handleClick = () => {
-        setPage("Réseaux");
-        navigate('reseaux');
-    };
 
     return (
         <div className="p-4 border border-gray-300 rounded-lg bg-white text-primary">

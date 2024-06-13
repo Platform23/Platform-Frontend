@@ -2,7 +2,14 @@ import WelcomeCard from "../components/cards/WelcomeCard";
 import NetworkCard from "../components/cards/NetworkCard";
 
 const networks = [
-  
+  // {
+  //     name: "Imformatique",
+  //     description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+  // },
+  // {
+  //     name: "AI",
+  //     description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
+  // },
 ];
 
 const Home = () => {
