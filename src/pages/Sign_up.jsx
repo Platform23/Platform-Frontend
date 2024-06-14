@@ -5,6 +5,7 @@ import PasswordInput from '../components/inputs/PasswordInput';
 import TextInput from '../components/inputs/TextInput';
 import TermsOfUse from '../components/buttons/TermsOfUse';
 import DropdownInput from '../components/inputs/DropdownInput';
+import {communityProfile, communities} from "../constants"
 import { useState } from "react"
 
 
@@ -15,12 +16,12 @@ const Sign_up = () => {
 
     return (
         <main className='relative'>
-            <section className=" flex flex-col md:flex-row h-screen items-center">
+            <section className="flex flex-col md:flex-row h-screen items-center">
                 <div className="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12 flex items-center justify-center">
 
-                    <div className="w-full h-100 py-5">
+                    <div className="w-full h-100 py-5 bg-white-smoke">
                         <img
-                            className="mx-auto mt-5"
+                            className="mx-auto mt-20"
                             alt="Logo"
                             src={logo}
                         />
@@ -38,9 +39,15 @@ const Sign_up = () => {
 
                             <DropdownInput placeholder=' Compétences clés'/>
 
-                            <DropdownInput placeholder=' Profil communautaire numérique'/>
+                            <DropdownInput 
+                                placeholder=' Profil communautaire numérique'
+                                option={communityProfile}
+                            />
 
-                            <DropdownInput placeholder=" Organisation numérique d'appartenance"/>
+                            <DropdownInput 
+                                placeholder=" Organisation numérique d'appartenance"
+                                option={communities}
+                            />
 
 
                             <TermsOfUse agree={agree} setAgree={setAgree}/>

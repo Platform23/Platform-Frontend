@@ -1,14 +1,18 @@
 import React from "react";
-import SelectContainer from "../container/SelectContainer";
 import Select from "react-tailwindcss-select";
+import {communityProfile, communities} from "../../constants"
 
-const options = [
-    { value: "ix", label: "IA" },
-    { value: "hacking", label: "Hacking" },
-    { value: "networking", label: "Networking" }
-];
+// const options = [
+//     { value: "ix", label: "IA" },
+//     { value: "hacking", label: "Hacking" },
+//     { value: "networking", label: "Networking" }
+// ];
 
-const DropdownInput = ({placeholder}) => {
+const DropdownInput = ({placeholder, option}) => {
+
+  const profile = communityProfile;
+  const community = communities;
+
   const [value, setValue] = React.useState();
 
   const handleChange = value => {
@@ -23,9 +27,9 @@ const DropdownInput = ({placeholder}) => {
           primaryColor="primary"
           size="lg"
           placeholder={placeholder}
+          options ={option}
           value={value}
           onChange={handleChange}
-          options ={options}
           isMultiple
           isSearchable
           isClearable
