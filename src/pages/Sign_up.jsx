@@ -3,7 +3,7 @@ import SignUpButton from '../components/buttons/SignUpButton';
 import { Link, useNavigate } from 'react-router-dom';
 import PasswordInput from '../components/inputs/PasswordInput';
 import TextInput from '../components/inputs/TextInput';
-import TermsOfUse from '../components/buttons/TermsOfUse';
+import TermsOfUse from '../components/checkbox/TermsOfUse';
 import DropdownInput from '../components/inputs/DropdownInput';
 import {communityProfile, communities} from "../constants"
 import { useState } from "react"
