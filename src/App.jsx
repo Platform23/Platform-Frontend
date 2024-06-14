@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Network from './pages/Network';
+import NetworkDetail from './pages/NetworkDetail';
 import Layout from './Layout';
 import Sign_in from './pages/Sign_in'
 import Sign_up from './pages/Sign_up'
@@ -21,6 +22,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='reseaux' element={<Network />} />
           <Route path='profil' element={<Profile />} />
+          <Route path='reseaux/:name' element={<NetworkDetail />} />
         </Route>
       </Routes>
     </>

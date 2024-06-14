@@ -1,4 +1,12 @@
+import { useNavigate } from "react-router-dom"
+
 const NetworkCard = ({ network }) => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/reseaux/${network.name}`);
+    };
+
     return (
         <div className="relative flex flex-col text-primary bg-white shadow-md bg-clip-border rounded-xl w-56">
             <div className="p-6">
@@ -15,7 +23,8 @@ const NetworkCard = ({ network }) => {
                 <div className="inline-block">
                     <button
                         className="flex items-center gap-2 px-4 py-2 font-sans text-xs font-bold text-center text-primary uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none bg-aqua hover:bg-primary hover:text-aqua active:bg-aqua"
-                        type="button">
+                        type="button"
+                        onClick={handleClick}>
                         Voir plus
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                             stroke="currentColor" className="w-4 h-4">
