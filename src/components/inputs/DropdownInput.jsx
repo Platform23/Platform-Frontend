@@ -1,4 +1,5 @@
 import React from "react";
+import SelectContainer from "../container/SelectContainer";
 import Select from "react-tailwindcss-select";
 
 const options = [
@@ -16,18 +17,21 @@ const DropdownInput = ({placeholder}) => {
 };
 
   return (
-    <div className="mt-5 w-full border-primary border rounded-lg">
-      <Select
-      primaryColor="indigo"
-        size="lg"
-        placeholder={placeholder}
-        value={value}
-        onChange={handleChange}
-        options ={options}
-        // autoComplete="off"
-        required
-      >
-      </Select>
+    <div className="mt-5 w-full border-primary border rounded-lg items-center justify-center">
+
+        <Select
+          primaryColor="primary"
+          size="lg"
+          placeholder={placeholder}
+          value={value}
+          onChange={handleChange}
+          options ={options}
+          isMultiple
+          isSearchable
+          isClearable
+          required
+        >
+        </Select>
     </div>
   );
 };
