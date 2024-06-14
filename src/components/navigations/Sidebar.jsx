@@ -21,11 +21,12 @@ const navigation = [
 
 const navsFooter = [
     {
-        href: '',
+        href: 'connexion',
         name: 'Déconnexion',
         icon: <FiLogOut size={24} />
     }
 ]
+
 
 const Sidebar = () => {
     const { setTitle, title } = useNavStore();
@@ -88,7 +89,7 @@ const Sidebar = () => {
                             <div className="font-roboto text-base font-medium leading-relaxed text-inherit">
                                 <span className="block">Jane Doe</span>
                                 <a
-                                    href=""
+                                    href="profil"
                                     className="block mt-px text-light-gray hover:text-primary text-xs"
                                 >
                                     Voir le profil

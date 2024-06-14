@@ -1,15 +1,15 @@
-import NoNetworkCard from "../components/cards/NoNetworkCard";
+import WelcomeCard from "../components/cards/WelcomeCard";
 import NetworkCard from "../components/cards/NetworkCard";
 
 const networks = [
-  {
-    name: "Imformatique",
-    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
-  },
-  {
-    name: "AI",
-    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
-  },
+  // {
+  //     name: "Imformatique",
+  //     description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+  // },
+  // {
+  //     name: "AI",
+  //     description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
+  // },
 ];
 
 const Home = () => {
@@ -22,7 +22,7 @@ const Home = () => {
       </div>
 
       <div className="w-80">
-        {!networks.length && <NoNetworkCard />}
+        {!networks.length && <WelcomeCard />}
       </div>
     </section >
   )
