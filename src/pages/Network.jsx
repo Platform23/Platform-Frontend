@@ -1,38 +1,12 @@
 import NetworkCard from "../components/cards/NetworkCard";
-
-const networks = [
-    {
-        name: "Imformatique",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
-    },
-    {
-        name: "AI",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
-    },
-    {
-        name: "Imformatique",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
-    },
-    {
-        name: "AI",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
-    },
-    {
-        name: "Imformatique",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
-    },
-    {
-        name: "AI",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
-    },
-];
+import {networks} from "../constants"
 
 const Network = () => {
     return (
         <section className="pt-28 pl-5">
-            <div className="flex flex-col text-primary bg-white shadow-md bg-clip-border rounded-xl w-80 md:w-96 p-6">
+            <div className="flex flex-col text-primary bg-white shadow-md bg-clip-border rounded-xl  md:w-1/2 sm:w-72 p-6">
                 <h3 className="block mb-2 font-montserrat text-xl font-semibold leading-snug tracking-normal">
-                    Intégrer un réseau avec un code d’invitation
+                Entrer votre votre code d’intégration pour intégrer un réseau
                 </h3>
 
                 <input

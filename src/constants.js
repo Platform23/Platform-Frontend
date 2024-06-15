@@ -9,7 +9,7 @@ export const Profile = {
         occupation: "IT manager"
     },
     certifications:{
-        title:"",
+        name:"",
         institution: "",
         date:""
     },
@@ -42,12 +42,12 @@ export const communities = [
 ]
 
 export const networks = [
-    {title: "Fablabs ", desc: "Ateliers de fabrication équipés de machines-outils à commande numérique",},
-    {title: "Makerspaces ", desc: "Atelier collaboratif dédié au prototypage, à la fabrication numérique et à des projets collaboratifs entre particuliers et entrepreneurs.",},
-    {title: "Hackerspaces", desc: "Atelier collaboratif dédié aux projets utilisant l'électronique, la programmation, l'impression 3D etc.",},
-    {title: "Technoshops", desc: "Réseaux d'ateliers citoyens d'accès à la fabrication numérique et à l'accompagnement sur les nouvelles technologies.",},
-    {title: "Repair cafés", desc: "Communautés organisant des événements temporaires permettant aux habitants d'apporter leurs objets à réparer par des bénévoles",},
-    {title: "Living labs", desc: "Plateformes d'innovation ouverte impliquant usage.ère.s, entreprises, chercheur.e.s.",},
-    {title: "Ateliers d’art", desc: "Communauté d’artisan.e.s et d’artistes qui partagent des espaces de travail et des ressources pour la création artistique.",},
-    {title: "Centre de formation professionnelle", desc: "Centre de formation professionnelle",},
+    {name: "Fablabs ", description: "Ateliers de fabrication équipés de machines-outils à commande numérique",},
+    {name: "Makerspaces ", description: "Atelier collaboratif dédié au prototypage, à la fabrication numérique et à des projets collaboratifs entre particuliers et entrepreneurs.",},
+    {name: "Hackerspaces", description: "Atelier collaboratif dédié aux projets utilisant l'électronique, la programmation, l'impression 3D etc.",},
+    {name: "Technoshops", description: "Réseaux d'ateliers citoyens d'accès à la fabrication numérique et à l'accompagnement sur les nouvelles technologies.",},
+    {name: "Repair cafés", description: "Communautés organisant des événements temporaires permettant aux habitants d'apporter leurs objets à réparer par des bénévoles",},
+    {name: "Living labs", description: "Plateformes d'innovation ouverte impliquant usage.ère.s, entreprises, chercheur.e.s.",},
+    {name: "Ateliers d’art", description: "Communauté d’artisan.e.s et d’artistes qui partagent des espaces de travail et des ressources pour la création artistique.",},
+    {name: "Centre de formation professionnelle", description: "Centre de formation professionnelle",},
 ]
