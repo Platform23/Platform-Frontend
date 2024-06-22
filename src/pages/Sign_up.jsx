@@ -37,15 +37,15 @@ const Sign_up = () => {
 
                             <PasswordInput placeholder='Confirmez le mot de passe' />
 
-                            <DropdownInput placeholder=' Compétences clés'/>
+                            <DropdownInput placeholder=' Compétences numérique et collaborative'/>
 
                             <DropdownInput 
-                                placeholder=' Profil communautaire numérique'
+                                placeholder=' Profil et rôle'
                                 option={communityProfile}
                             />
 
                             <DropdownInput 
-                                placeholder=" Organisation numérique d'appartenance"
+                                placeholder=" Communauté d'appartenance"
                                 option={communities}
                             />
 
