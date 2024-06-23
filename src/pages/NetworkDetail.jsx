@@ -3,16 +3,23 @@ import useNavStore from '../store/navStore';
 import { useEffect } from "react";
 import NetworkDetailBar from "../components/navigations/NetworkDetailBar";
 import Chat from "../components/chat/Chat";
+import {networks} from "../constants"
+
 
 const NetworkDetail = () => {
-    const { name } = useParams();
+    const { name } = useParams(); // Retreive the network name from the path
     const { title, setTitle } = useNavStore();
     let previousPageName = title;
     const access = true;
-    const description = "Lorem ipsum dolor, sit amet consectetur adipisicing elit.";
+
+    // Get network description using network name
+    const networkDescription = (name) => {
+        const network = networks.find((network) => network.name === name);
+        return network ? network.description : "No description found";
+      };
 
     useEffect(() => {
-        setTitle("AI");
+        setTitle(name);
         return () => {
             setTitle(previousPageName);
         };
@@ -41,7 +48,7 @@ const NetworkDetail = () => {
                     <div className="fixed right-0">
                         <NetworkDetailBar
                             name={name}
-                            description={description} />
+                            description={networkDescription(name)} />
                     </div>
                 </div>
             }
