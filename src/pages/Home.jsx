@@ -1,4 +1,4 @@
-import WelcomeCard from "../components/cards/WelcomeCard";
+import NoNetworkCard from "../components/cards/NoNetworkCard";
 import NetworkCard from "../components/cards/NetworkCard";
 
 const networks = [
@@ -22,7 +22,7 @@ const Home = () => {
       </div>
 
       <div className="w-80">
-        {!networks.length && <WelcomeCard />}
+        {!networks.length && <NoNetworkCard />}
       </div>
     </section >
   )
