@@ -41,6 +41,7 @@ const Sidebar = () => {
     // const handleSidebarToggle = () => {
     //     setIsOpen();
     // };
+    
 
     return (
         <div className="hidden md:flex flex-col w-64 bg-white text-primary">
