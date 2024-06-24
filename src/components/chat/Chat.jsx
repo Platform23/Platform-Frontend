@@ -39,7 +39,6 @@ const Chat = () => {
                         </button>
                     </span> */}
                     
-                    {/* Text input */}
                     {/* <input 
                         type="text" 
                         placeholder="Write your message!" 
@@ -49,6 +48,7 @@ const Chat = () => {
                         onChange={(e) => setInputValue(e.target.value)}
                     /> */}
 
+                    {/* Text input section*/}
                     <InputEmoji
                         value={text}
                         onChange={setText}

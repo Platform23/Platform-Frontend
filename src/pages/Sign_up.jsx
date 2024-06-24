@@ -53,7 +53,7 @@ const Sign_up = () => {
                             <TermsOfUse agree={agree} setAgree={setAgree}/>
 
 
-                            <SignUpButton agree={agree} label="Inscription" handleClick={() => { navigate('/') }} />
+                            <SignUpButton agree={agree} label="Inscription" handleClick={() => { navigate('/bienvenue') }} />
                         </form>
 
                         <p className="mt-8 text-center text-lg font-semibold">Vous avez déjà un compte?<Link to="/connexion" className="text-primary font-bold"> Se connecter</Link></p>

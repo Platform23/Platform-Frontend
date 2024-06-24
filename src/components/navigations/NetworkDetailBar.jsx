@@ -22,7 +22,7 @@ const NetworkDetailBar = ({ name, description }) => {
             </div>
 
             <nav className="flex flex-col flex-1 overflow-y-auto pt-10">
-                {/* <div className="py-4">
+                <div className="py-4">
                     <h3 className="font-montserrat text-xl font-semibold leading-snug tracking-normal">
                         Sujets
                     </h3>
@@ -43,7 +43,7 @@ const NetworkDetailBar = ({ name, description }) => {
                             ))
                         }
                     </ul>
-                </div> */}
+                </div>
 
                 <div className="py-4">
                     <h3 className="font-montserrat text-xl font-semibold leading-snug tracking-normal">
