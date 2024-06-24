@@ -13,7 +13,7 @@ const navigation = [
         icon: <TiHome size={24} />
     },
     {
-        href: 'reseaux',
+        href: '/reseaux',
         name: 'Réseaux',
         icon: <FaUsers size={24} />
     },
@@ -21,7 +21,7 @@ const navigation = [
 
 const navsFooter = [
     {
-        href: 'connexion',
+        href: '/connexion',
         name: 'Déconnexion',
         icon: <FiLogOut size={24} />
     }

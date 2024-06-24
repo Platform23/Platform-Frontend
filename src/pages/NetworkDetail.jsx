@@ -26,8 +26,9 @@ const NetworkDetail = () => {
     }, [title]);
 
     return (
+        // If access false, display button in the middle of the screen
         <section className={`${!access ? 'h-screen flex justify-center items-center' : ''}`}>
-            {!access ?
+            {!access ? // If access is false, displays request acces button. Else show chat and network sidebar
                 <div className="w-80">
                     <button
                         className="flex items-center gap-2 px-4 py-2 font-sans text-xs font-bold text-cente uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-aqua bg-primary hover:bg-gray-700 active:bg-gray-700"
@@ -39,6 +40,7 @@ const NetworkDetail = () => {
                         Demande d’accès
                     </button>
                 </div>
+                
                 :
                 <div className="h-screen flex">
                     <div className="flex-1 pt-24 mr-64">
