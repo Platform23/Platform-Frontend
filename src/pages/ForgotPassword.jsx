@@ -2,9 +2,24 @@ import { logo } from '../assets/images';
 import ForgotPasswordButton from '../components/buttons/ForgotPassButton';
 import { useNavigate } from 'react-router-dom';
 import TextInput from '../components/inputs/TextInput';
+import { useContext, useState } from 'react';
+import AuthContext from '../hooks/AuthProvider';
 
 const ForgotPassword = () => {
     const navigate = useNavigate();
+    const { forgotPassword } = useContext(AuthContext);
+    const [error, setError] = useState(null);
+    const [email, setEmail] = useState(null);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            await forgotPassword(email);
+            navigate("/confirmation-envoi-email");
+        } catch (responseError) {
+            setError(responseError);
+        }
+    };
 
     return (
         <main className='relative'>
@@ -20,9 +35,14 @@ const ForgotPassword = () => {
                         <h1 className="text-2xl font-bold leading-tight text-center font-montserrat text-primary">Récupération mot de passe</h1>
 
                         <form className="mt-5" action="#" method="POST">
-                            <TextInput placeholder="Entrer l'adresse e-mail"/>
+                            <TextInput
+                                id="email"
+                                name="email"
+                                type={'email'}
+                                onChange={(e) => setEmail(e.target.value)}
+                                placeholder="Entrer l'adresse e-mail" />
 
-                            <ForgotPasswordButton label="Envoyer" handleClick={() => { navigate('/mot_de_passe_oublie_confirmation') }} />
+                            <ForgotPasswordButton label="Envoyer" handleClick={handleSubmit} />
                         </form>
                     </div>
                 </div>

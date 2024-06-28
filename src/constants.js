@@ -17,28 +17,38 @@ export const Profile = {
 };
 
 export const communityProfile = [
-    {value: "Utilisateur / Utilisatrice", label: "Utilisateur / Utilisatrice (Étudiant.e ; Chercheur.e…)",},
-    {value: "Volontaire / Bénévole", label: "Volontaire / Bénévole",},
-    {value: "Réparateur.trice", label: "Réparateur.trice",},
-    {value: "Fab-manager", label: "Fab-manager",},
-    {value: "Community manager/ Animateur.trice de communauté", label: "Community manager",},
-    {value: "Volontaire / Bénévole", label: "Volontaire / Bénévole",},
-    {value: "Logisticien.ne", label: "Logisticien.ne",},
-    {value: "Développeur.euse d'interfaces", label: "Développeur.euse d'interfaces",},
-    {value: "Designer/ Programmeur.euse", label: "Designer/ Programmeur.euse"},
-    {value: "Concepteur.trice de produits technologiques", label: "Concepteur.trice de produits technologiques",},
+    {value: 1, label: "Utilisateur / Utilisatrice (Étudiant.e ; Chercheur.e…)",},
+    {value: 2, label: "Volontaire / Bénévole",},
+    {value: 3, label: "Réparateur.trice",},
+    {value: 4, label: "Fab-manager",},
+    {value: 5, label: "Community manager",},
+    {value: 6, label: "Volontaire / Bénévole",},
+    {value: 7, label: "Logisticien.ne",},
+    {value: 8, label: "Développeur.euse d'interfaces",},
+    {value: 9, label: "Designer/ Programmeur.euse"},
+    {value: 10, label: "Concepteur.trice de produits technologiques",},
 ];
 
 export const communities = [
-    {value: "Fablabs ", label: "Fablabs",},
-    {value: "Makerspaces ", label: "Makerspaces",},
-    {value: "Réparateurs ", label: "Réparateurs",},
-    {value: "Hackerspaces", label: "Hackerspaces",},
-    {value: "Living labs", label: "Living labs",},
-    {value: "Communautés open source hardware", label: "Communautés open source hardware",},
-    {value: "Écoles de hackers et d'ateliers techniques", label: "Écoles de hackers et d'ateliers techniques",},
-    {value: "Bibliothèques makerspaces", label: "Bibliothèques makerspaces",},
-    {value: "Centre de formation professionnelle", label: "Centre de formation professionnelle",},
+    {value: 1, label: "Fablabs",},
+    {value: 2, label: "Makerspaces",},
+    {value: 3, label: "Réparateurs",},
+    {value: 4, label: "Hackerspaces",},
+    {value: 5, label: "Living labs",},
+    {value: 6, label: "Communautés open source hardware",},
+    {value: 7, label: "Écoles de hackers et d'ateliers techniques",},
+    {value: 8, label: "Bibliothèques makerspaces",},
+    {value: 9, label: "Centre de formation professionnelle",},
+]
+
+export const competences = [
+    {value: 1, label: "Savoir utiliser les technologies numériques pour la gestion de l'information et des médias",},
+    {value: 2, label: "Savoir utiliser les technologies numériques pour communiquer et collaborer",},
+    {value: 3, label: "Faire preuse de pensée computationnelle et critique",},
+    {value: 4, label: "Utiliser les technologies numériques pour favoriser son insertion et son développement professionnel",},
+    {value: 5, label: "Mobiliser ses habiletés technologiques et numériques pour innover et créer",},
+    {value: 6, label: "Savoir gérer et piloter des projets avec une communauté de professionnel.le.s",},
+    {value: 7, label: "Accompagner – Former et apprendre avec les autres",},
 ]
 
 export const networks = [

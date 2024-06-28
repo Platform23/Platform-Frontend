@@ -3,8 +3,9 @@ import { FiLogOut } from "react-icons/fi";
 import { TiHome } from "react-icons/ti";
 import { FaUsers } from "react-icons/fa";
 import useNavStore from '../../store/navStore';
-// import useDrawerStore from '../../store/drawerStore';
 import { useNavigate } from 'react-router-dom';
+import { useContext, useState } from 'react';
+import AuthContext from '../../hooks/AuthProvider';
 
 const navigation = [
     {
@@ -19,18 +20,11 @@ const navigation = [
     },
 ]
 
-const navsFooter = [
-    {
-        href: '/connexion',
-        name: 'Déconnexion',
-        icon: <FiLogOut size={24} />
-    }
-]
-
-
 const Sidebar = () => {
+    const navigate = useNavigate();
     const { setTitle, title } = useNavStore();
-    // const { setIsOpen } = useDrawerStore();
+    const { logout, user } = useContext(AuthContext);
+    const [error, setError] = useState(null);
     const nagivate = useNavigate();
 
     const handleClick = (item) => {
@@ -38,10 +32,14 @@ const Sidebar = () => {
         nagivate(item.href);
     };
 
-    // const handleSidebarToggle = () => {
-    //     setIsOpen();
-    // };
-    
+    const handleLogout = async () => {
+        try {
+            await logout();
+            navigate("/connexion");
+        } catch (responseError) {
+            setError(responseError)
+        }
+    }
 
     return (
         <div className="hidden md:flex flex-col w-64 bg-white text-primary">
@@ -72,23 +70,19 @@ const Sidebar = () => {
 
                 <div>
                     <ul className="px-4 pb-4 font-roboto text-base font-medium leading-relaxed text-inherit">
-                        {
-                            navsFooter.map((item, idx) => (
-                                <li key={idx}>
-                                    <a href={item.href} className="flex items-center gap-x-2 p-2 rounded-lg  hover:bg-aqua active:bg-aqua duration-150">
-                                        <div>{item.icon}</div>
-                                        {item.name}
-                                    </a>
-                                </li>
-                            ))
-                        }
+                        <a
+                            onClick={handleLogout}
+                            className="flex items-center gap-x-2 p-2 rounded-lg cursor-pointer  hover:bg-aqua active:bg-aqua duration-150">
+                            <FiLogOut size={24} />
+                            Déconnexion
+                        </a>
                     </ul>
 
                     <div className="py-4 px-4 border-t">
                         <div className="flex items-center gap-x-4">
                             <img src="https://api.dicebear.com/8.x/adventurer/svg?seed=JaneDoe" className="w-12 h-12 rounded-full" />
                             <div className="font-roboto text-base font-medium leading-relaxed text-inherit">
-                                <span className="block">Jane Doe</span>
+                                <span className="block">{user?.pseudo ?? "Jane"}</span>
                                 <a
                                     href="profil"
                                     className="block mt-px text-light-gray hover:text-primary text-xs"

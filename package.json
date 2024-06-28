@@ -16,6 +16,7 @@
     "date-fns": "^3.6.0",
     "emoji-picker-react": "^4.10.0",
     "framer-motion": "^11.0.24",
+    "lottie-react": "^2.4.0",
     "react": "^18.2.0",
     "react-chat-elements": "^12.0.14",
     "react-datepicker": "^6.6.0",
@@ -24,6 +25,7 @@
     "react-icons": "^5.0.1",
     "react-input-emoji": "^5.9.0",
     "react-router-dom": "^6.22.3",
+    "react-spinners": "^0.14.1",
     "react-tailwindcss-select": "^1.8.5",
     "zustand": "^4.5.2"
   },
