@@ -1,8 +1,9 @@
 import { createContext, useState, useEffect } from 'react';
 import Loader from '../components/loaders/Loader';
+import { handleResponse } from '../utils/utils';
+import { API_BASE_URL } from '../utils/constants';
 
 const AuthContext = createContext();
-const API_BASE_URL = "http://localhost:3333/api";
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -24,15 +25,6 @@ export const AuthProvider = ({ children }) => {
 
     checkAuthStatus();
   }, []);
-
-  const handleResponse = async (response) => {
-    if (!response.ok) {
-      const errorData = await response.json();
-      const errorMessage = response.status === 422 ? errorData.messages[0].message : errorData.message;
-      throw new Error(errorMessage);
-    }
-    return response.json();
-  };
 
   const login = async (credentials) => {
     try {

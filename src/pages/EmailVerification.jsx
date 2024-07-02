@@ -5,8 +5,7 @@ import ForgotPasswordButton from '../components/buttons/ForgotPassButton';
 import validAnimation from "../assets/lotties/valid.json";
 import errorAnimation from "../assets/lotties/error.json";
 import Loader from '../components/loaders/Loader';
-
-const API_BASE_URL = "http://localhost:3333/api";
+import { API_BASE_URL } from '../utils/constants';
 
 const EmailVerification = () => {
     const { token } = useParams();

@@ -3,7 +3,7 @@ import useNavStore from '../store/navStore';
 import { useEffect } from "react";
 import NetworkDetailBar from "../components/navigations/NetworkDetailBar";
 import Chat from "../components/chat/Chat";
-import {networks} from "../constants"
+import { networks } from "../utils/constants"
 
 
 const NetworkDetail = () => {
@@ -16,7 +16,7 @@ const NetworkDetail = () => {
     const networkDescription = (name) => {
         const network = networks.find((network) => network.name === name);
         return network ? network.description : "No description found";
-      };
+    };
 
     useEffect(() => {
         setTitle(name);
@@ -40,7 +40,7 @@ const NetworkDetail = () => {
                         Demande d’accès
                     </button>
                 </div>
-                
+
                 :
                 <div className="h-screen flex">
                     <div className="flex-1 pt-24 mr-64">

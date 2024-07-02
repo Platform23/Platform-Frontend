@@ -43,7 +43,7 @@ function App() {
               </PrivateRoute>}
           />
 
-          <Route path="profil"
+          <Route path="profil/:userId"
             element={
               <PrivateRoute>
                 <Profile />

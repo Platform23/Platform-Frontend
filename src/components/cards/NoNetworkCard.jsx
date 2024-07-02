@@ -8,7 +8,7 @@ const NoNetworkCard = () => {
             </div>
 
             <div className="my-6 mb-4 text-xl">
-                <p>Vous n'avez intégré aucun réseau pour le moment.</p>
+                <p>Vous n&apos;avez intégré aucun réseau pour le moment.</p>
                 <p>Veuillez intégré un réseau pour participer aux discussions.</p>
             </div>
 

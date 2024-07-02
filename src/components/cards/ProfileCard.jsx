@@ -1,25 +1,30 @@
 import { useState } from "react"
-import { Profile } from '../../constants';
 import UpdateProfileDialog from '../dialogBox/UpdateProfileDialog';
+import { API_BASE_URL } from "../../utils/constants";
+import { useUserProfile } from "../../hooks/useUserProfile";
 
 
-const ProfileCard = () =>{
+const ProfileCard = ({ userId }) => {
+    const { user, loading } = useUserProfile(userId);
+    const [isOpen, setIsOpen] = useState(false);
 
-    const[isOpen, setIsOpen] = useState(false);
-
-    const handleOpen = () =>{
+    const handleOpen = () => {
         setIsOpen(!isOpen);
     }
 
-    return(
+    if (loading) {
+        return;
+    }
+
+    return (
         <div>
             <div className="flex flex-wrap justify-center">
                 <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
                     <div className="relative">
                         {/* Profile picture */}
                         <img
-                            alt="..."
-                            src="https://api.dicebear.com/8.x/adventurer/svg?seed=JaneDoe"
+                            alt="avatar"
+                            src={user.avatar ? `${API_BASE_URL}/uploads/avatars/${user.avatar}` : `https://api.dicebear.com/8.x/adventurer/svg?seed=${user.pseudo}`}
                             className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
                             style={{ maxWidth: "150px" }}
                         />
@@ -37,12 +42,16 @@ const ProfileCard = () =>{
                         >
                             Editer profil
                         </button>
-                        <UpdateProfileDialog open={isOpen} handleOpen={handleOpen} />
+                        <UpdateProfileDialog
+                            open={isOpen}
+                            handleOpen={handleOpen}
+                            userId={userId}
+                        />
                     </div>
                 </div>
 
                 {/* User unique code */}
-                <div className="w-full lg:w-4/12 px-4 lg:order-1">
+                {/* <div className="w-full lg:w-4/12 px-4 lg:order-1">
                     <div className="flex justify-center py-4 lg:pt-4 pt-8">
                         <div className="mr-4 p-3 text-center">
                             <h5 className="text-lg font-bold block tracking-wide text-light-gray">
@@ -50,21 +59,21 @@ const ProfileCard = () =>{
                             </h5>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             {/* User personal information */}
             <div className="text-center">
                 <h3 className="text-3xl font-semibold leading-normal mb-2 text-primary">
-                    {Profile.user.username}
+                    {user.pseudo}
                 </h3>
                 <div className="text-lg leading-normal mb-2 text-primary font-bold">
                     <i className="fas fa-map-marker-alt mr-2 text-lg text-gray-500"></i>{" "}
-                        {Profile.user.email}                        
+                    {user.email}
                 </div>
                 <div className="text-lg mb-3 text-primary mt-5">
                     <i className="fas fa-briefcase mr-2 text-lg text-gray-500"></i>
-                    {Profile.user.occupation}
+                    {user.profession ?? 'None'}
                 </div>
             </div>
         </div>

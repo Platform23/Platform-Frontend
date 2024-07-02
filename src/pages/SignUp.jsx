@@ -5,10 +5,9 @@ import PasswordInput from '../components/inputs/PasswordInput';
 import TextInput from '../components/inputs/TextInput';
 import TermsOfUse from '../components/checkbox/TermsOfUse';
 import DropdownInput from '../components/inputs/DropdownInput';
-import { communityProfile, communities, competences } from "../constants"
+import { communityProfile, communities, competences } from "../utils/constants"
 import { useCallback, useContext, useState } from "react"
 import AuthContext from '../hooks/AuthProvider';
-// import { useAuth } from '../hooks/AuthProvider';
 
 const SignUp = () => {
     const navigate = useNavigate();

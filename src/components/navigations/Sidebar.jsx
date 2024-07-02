@@ -6,6 +6,7 @@ import useNavStore from '../../store/navStore';
 import { useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import AuthContext from '../../hooks/AuthProvider';
+import { API_BASE_URL } from '../../utils/constants';
 
 const navigation = [
     {
@@ -79,12 +80,13 @@ const Sidebar = () => {
                     </ul>
 
                     <div className="py-4 px-4 border-t">
-                        <div className="flex items-center gap-x-4">
-                            <img src="https://api.dicebear.com/8.x/adventurer/svg?seed=JaneDoe" className="w-12 h-12 rounded-full" />
+                        <div className="flex items-center gap-x-4 cursor-pointer" onClick={() => navigate(`/profil/${user.uuid}`)}>
+                            <img
+                                alt="avatar"
+                                src={user.avatar ? `${API_BASE_URL}/uploads/avatars/${user.avatar}` : `https://api.dicebear.com/8.x/adventurer/svg?seed=${user.pseudo}`} className="w-12 h-12 rounded-full" />
                             <div className="font-roboto text-base font-medium leading-relaxed text-inherit">
-                                <span className="block">{user?.pseudo ?? "Jane"}</span>
+                                <span className="block">{user.pseudo}</span>
                                 <a
-                                    href="profil"
                                     className="block mt-px text-light-gray hover:text-primary text-xs"
                                 >
                                     Voir le profil
