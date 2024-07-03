@@ -50,7 +50,7 @@ function App() {
               </PrivateRoute>}
           />
 
-          <Route path="reseaux/:name"
+          <Route path="reseaux/:uuid"
             element={
               <PrivateRoute>
                 <NetworkDetail />

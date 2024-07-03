@@ -11,7 +11,7 @@ const SignIn = () => {
     const navigate = useNavigate();
     const [error, setError] = useState(null);
     const [credentials, setCredentials] = useState({
-        emailOrPseudo: '',
+        identifier: '',
         password: '',
     });
 
@@ -45,11 +45,11 @@ const SignIn = () => {
 
                         <form className="mt-6" action="#" method="POST">
                             <TextInput
-                                id="email"
-                                name="email"
+                                id="identifier"
+                                name="identifier"
                                 type={'text'}
                                 onChange={handleChange}
-                                placeholder="Adresse e-mail" />
+                                placeholder="Adresse e-mail ou Pseudo" />
 
                             <PasswordInput
                                 id="password"

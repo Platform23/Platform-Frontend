@@ -5,7 +5,7 @@ const NetworkCard = ({ network }) => {
 
     const handleClick = () => {
         // Add the network name in the path
-        navigate(`/reseaux/${network.name}`);
+        navigate(`/reseaux/${network.uuid}`);
 
     };
 

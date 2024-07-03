@@ -4,36 +4,63 @@ import { handleResponse } from '../utils/utils';
 import { API_BASE_URL } from '../utils/constants';
 
 export const useNetworks = () => {
-    const [networks, setNetworks] = useState([]);
+    const [userNetworks, setUserNetworks] = useState([]);
+    const [allNetworks, setAllNetworks] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const { user } = useContext(AuthContext);
 
     useEffect(() => {
-        const fetchNetworks = async () => {
-            try {
-                const response = await fetch(`${API_BASE_URL}/networks/user-networks`, {
-                    credentials: 'include',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                });
-
-                const data = await handleResponse(response);
-                setNetworks(data.data);
-            } catch (err) {
-                setError(err.message);
-            } finally {
-                setLoading(false);
-            }
-        };
-
         if (user) {
-            fetchNetworks();
+            fetchUserNetworks();
         } else {
             setLoading(false);
         }
     }, [user]);
 
-    return { networks, loading, error };
+    const fetchUserNetworks = async () => {
+        setLoading(true);
+        try {
+            const response = await fetch(`${API_BASE_URL}/networks/user-networks`, {
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            const data = await handleResponse(response);
+            setUserNetworks(data.data);
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const fetchAllNetworks = async () => {
+        setLoading(true);
+        try {
+            const response = await fetch(`${API_BASE_URL}/networks`, {
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            const data = await handleResponse(response);
+            setAllNetworks(data.data);
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    return {
+        userNetworks,
+        allNetworks,
+        loading,
+        error,
+        fetchAllNetworks
+    };
 };

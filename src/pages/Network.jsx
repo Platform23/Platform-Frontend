@@ -1,7 +1,16 @@
 import NetworkCard from "../components/cards/NetworkCard";
-import { networks } from "../utils/constants"
+import { useNetworks } from "../hooks/useNetworks";
+import { useEffect } from "react";
 
 const Network = () => {
+    const { fetchAllNetworks, allNetworks, loading, error } = useNetworks();
+
+    useEffect(() => {
+        fetchAllNetworks();
+    }, []);
+
+    if (loading) return null;
+
     return (
         <section className="pt-28 pl-5">
             <div className="flex flex-col text-primary bg-white shadow-md bg-clip-border rounded-xl  md:w-1/2 sm:w-72 p-6">
@@ -10,6 +19,7 @@ const Network = () => {
                 </h3>
 
                 <input
+                    name="invitation"
                     type="text"
                     placeholder="Entrer le code d’invitation"
                     className="w-full px-4 py-3 rounded-lg bg-[#F0F0F0] mt-2 mb-6 border focus:border-[#ADADAD] focus:outline-none"
@@ -30,8 +40,8 @@ const Network = () => {
                     Découvrez les différents réseaux
                 </h3>
                 <div className="flex justify-center md:justify-start flex-wrap gap-6">
-                    {networks.map((network, idx) => (
-                        <NetworkCard key={idx} network={network} />
+                    {allNetworks.map((network) => (
+                        <NetworkCard key={network.id} network={network} />
                     ))}
                 </div>
             </div>

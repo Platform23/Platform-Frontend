@@ -4,21 +4,21 @@ import { useNetworks } from "../hooks/useNetworks";
 import NetworkCardShimmer from "../components/cards/NetworkCardShimmer";
 
 const Home = () => {
-  const { networks, loading, error } = useNetworks();
+  const { userNetworks, loading, error } = useNetworks();
 
   return (
-    <section className={`${!networks.length ? 'h-screen flex justify-center items-center' : ''}`}>
+    <section className={`${!userNetworks.length ? 'h-screen flex justify-center items-center' : ''}`}>
       <div className="flex justify-center pb-10 pl-0 pt-28 md:pl-5 md:justify-start flex-wrap gap-6">
         {loading ? (
           Array(6).fill().map((_, index) => (
             <NetworkCardShimmer key={index} />
           ))
-        ) : networks.length > 0 ? (
-          networks.map((data) => (
+        ) : userNetworks.length > 0 ? (
+          userNetworks.map((data) => (
             <NetworkCard key={data.network.id} network={data.network} />
           ))) : (
           <div className="w-80">
-            {!networks.length && <NoNetworkCard />}
+            {!userNetworks.length && <NoNetworkCard />}
           </div>
         )}
       </div>

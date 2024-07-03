@@ -34,7 +34,15 @@ export const AuthProvider = ({ children }) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(credentials),
+        body: JSON.stringify({
+          // Determine if identifier is an email or pseudo
+          ...(
+            credentials.identifier.includes('@')
+              ? { email: credentials.identifier }
+              : { pseudo: credentials.identifier }
+          ),
+          password: credentials.password,
+        }),
       });
 
       const data = await handleResponse(response);

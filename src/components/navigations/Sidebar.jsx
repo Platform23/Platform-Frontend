@@ -42,6 +42,10 @@ const Sidebar = () => {
         }
     }
 
+    if (!user) {
+        return null;
+    }
+
     return (
         <div className="hidden md:flex flex-col w-64 bg-white text-primary">
             <div className='h-20 flex items-center px-8'>

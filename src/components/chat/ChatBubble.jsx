@@ -1,33 +1,35 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { API_BASE_URL } from "../../utils/constants";
+import AuthContext from "../../hooks/AuthProvider";
+import { formatTime } from "../../utils/utils";
 
-const ChatBubble = ({ type, sender, time, message, imageUrl }) => {
+const ChatBubble = ({ sender, time, message, imageUrl, onDelete }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const { user } = useContext(AuthContext);
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
 
-    const isAlice = sender.name === 'Alice';
-    const alignmentClass = isAlice ? "justify-end" : "justify-start";
+    const alignmentClass = sender.pseudo === user.pseudo ? "justify-end" : "justify-start";
 
     return (
         <div className={`flex ${alignmentClass} gap-2.5`}>
-            <img className="w-8 h-8 rounded-full" src={sender.profilePicture} alt={`${sender.name} image`} />
+            <img className="w-8 h-8 rounded-full" src={sender.avatar ? `${API_BASE_URL}/uploads/avatars/${sender.avatar}` : `https://api.dicebear.com/8.x/adventurer/svg?seed=${user.pseudo}`} alt={`${sender.pseudo} image`} />
 
             <div className="flex flex-col gap-1">
                 <div className="flex flex-col w-full max-w-[326px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
                     <div className="flex items-center space-x-2 rtl:space-x-reverse mb-2">
-                        <span className="text-sm font-semibold text-gray-900">{sender.name}</span>
-                        <span className="text-sm font-normal text-gray-500">{time}</span>
+                        <span className="text-sm font-semibold text-gray-900">{sender.pseudo}</span>
+                        <span className="text-sm font-normal text-gray-500">{formatTime(time)}</span>
                     </div>
                     <p className="text-sm font-normal text-gray-900">{message}</p>
 
                     {
-                        type === 'image'
-                        &&
+                        imageUrl &&
                         <div className="group relative my-2.5">
                             <img
-                                src={imageUrl}
+                                src={`${API_BASE_URL}/uploads/chat_images/${imageUrl}`}
                                 className="rounded-lg" />
                         </div>
                     }
@@ -49,16 +51,19 @@ const ChatBubble = ({ type, sender, time, message, imageUrl }) => {
                     <li>
                         <a href="#" className="block px-4 py-2 hover:bg-gray-100">Copier</a>
                     </li>
-                    {sender.name === 'Alice' &&
-                        <li>
-                            <a href="#" className="block px-4 py-2 hover:bg-gray-100">Supprimer</a>
+                    {sender.pseudo === user.pseudo &&
+                        <li >
+                            <button onClick={onDelete} className="block px-4 py-2 hover:bg-gray-100 w-full text-left">
+                                Supprimer
+                            </button>
                         </li>
                     }
                     {
-                        type === 'image'
-                        &&
+                        imageUrl &&
                         <li>
-                            <a href="#" className="block px-4 py-2 hover:bg-gray-100">Télécharger</a>
+                            <button className="block px-4 py-2 hover:bg-gray-100">
+                                Télécharger
+                            </button>
                         </li>
                     }
                 </ul>
