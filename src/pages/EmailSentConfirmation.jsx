@@ -2,7 +2,7 @@ import { logo } from '../assets/images';
 import ForgotPasswordButton from '../components/buttons/ForgotPassButton';
 import { useNavigate } from 'react-router-dom';
 
-const ForgotPasswordConfirm = () => {
+const EmailSentConfirmation = () => {
     const navigate = useNavigate();
 
     return (
@@ -18,11 +18,10 @@ const ForgotPasswordConfirm = () => {
                         />
                         <h1 className="text-2xl font-bold leading-tight text-center font-montserrat text-primary">Récupération mot de passe</h1>
                         <p className='text-center text-2xl text-black font-roboto mt-5'>
-                            Bien reçue. Un email de récupération vous sera envoyé à votre adresse. 
+                            Bien reçue. Un email de récupération vous sera envoyé à votre adresse.
                         </p>
 
                         <form className="mt-5" action="#" method="POST">
-
                             <ForgotPasswordButton label="Retour" handleClick={() => { navigate('/connexion') }} />
                         </form>
                     </div>
@@ -32,4 +31,4 @@ const ForgotPasswordConfirm = () => {
     )
 }
 
-export default ForgotPasswordConfirm
+export default EmailSentConfirmation
