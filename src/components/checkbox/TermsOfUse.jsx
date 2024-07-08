@@ -1,3 +1,5 @@
+import Policy from '../../utils/Politique_de_confidentialité.pdf'
+
 
 const TermsOfUse = ({agree, setAgree}) => {
 
@@ -14,7 +16,7 @@ const TermsOfUse = ({agree, setAgree}) => {
                 onChange={handleCheckboxChange}
             />
                 <label htmlFor="agreeCheckbox" className="ml-2 block text-md font-semibold text-primary">
-                    J'accepte les conditions d'uttilisations
+                    J'accepte les <a href={Policy} target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline">conditions d'utilisation</a>
                 </label>
             </div>
         </div>

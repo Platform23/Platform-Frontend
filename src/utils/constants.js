@@ -37,7 +37,7 @@ export const communities = [
     { value: 5, label: "Living labs", },
     { value: 6, label: "Communautés open source hardware", },
     { value: 7, label: "Écoles de hackers et d'ateliers techniques", },
-    { value: 8, label: "Bibliothèques makerspaces", },
+    { value: 8, label: "Bibliothèque makerspaces", },
     { value: 9, label: "Centre de formation professionnelle", },
 ]
 
