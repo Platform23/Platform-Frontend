@@ -8,12 +8,16 @@ import DropdownInput from '../components/inputs/DropdownInput';
 import { communityProfile, communities, competences } from "../utils/constants"
 import { useCallback, useContext, useState } from "react"
 import AuthContext from '../hooks/AuthProvider';
+import ErrorModal from '../components/modal/ErrorModal';
+import Skills from '../utils/Platform_competences.pdf'
+
 
 const SignUp = () => {
     const navigate = useNavigate();
     const [agree, setAgree] = useState(false);
     const { register } = useContext(AuthContext);
     const [error, setError] = useState(null);
+    const [showErrorModal, setShowErrorModal] = useState(false);
     const [formData, setFormData] = useState({
         email: '',
         pseudo: '',
@@ -38,6 +42,7 @@ const SignUp = () => {
         e.preventDefault();
         if (formData.password !== formData.confirm_password) {
             setError("Les mots de passe ne correspondent pas");
+            setShowErrorModal(true);
             return;
         }
 
@@ -46,6 +51,7 @@ const SignUp = () => {
             navigate("/bienvenue");
         } catch (responseError) {
             setError(responseError)
+            setShowErrorModal(true);
         }
     };
 
@@ -54,7 +60,7 @@ const SignUp = () => {
             <section className="flex flex-col md:flex-row h-screen items-center">
                 <div className="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12 flex items-center justify-center">
 
-                    <div className="w-full h-100 py-5 mt-28">
+                    <div className="w-full h-100 py-5 mt-40">
                         <img
                             className="mx-auto mt-20"
                             alt="Logo"
@@ -110,6 +116,10 @@ const SignUp = () => {
                                 onChange={(value) => handleDropdownChange('communities', value)}
                             />
 
+                            <div className="mt-5 block text-md font-semibold text-primary">
+                                Cliquez ici pour plus d'informations sur les <a href={Skills} target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline">compétences.</a>
+                            </div> 
+
                             <TermsOfUse agree={agree} setAgree={setAgree} />
 
                             <SignUpButton
@@ -117,6 +127,13 @@ const SignUp = () => {
                                 handleClick={handleSubmit}
                                 label="Inscription" />
                         </form>
+
+                        {/* Error Modal */}
+                        <ErrorModal
+                            show={showErrorModal}
+                            onClose={() => setShowErrorModal(false)}
+                            errorMessage={error}
+                        />
 
                         <p className="mt-8 text-center text-lg font-semibold">Vous avez déjà un compte?<Link to="/connexion" className="text-primary font-bold"> Se connecter</Link></p>
                     </div>

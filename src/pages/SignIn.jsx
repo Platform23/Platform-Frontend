@@ -5,6 +5,7 @@ import PasswordInput from '../components/inputs/PasswordInput';
 import TextInput from '../components/inputs/TextInput';
 import { useContext, useState } from 'react';
 import AuthContext from '../hooks/AuthProvider';
+import ErrorModal from '../components/modal/ErrorModal';
 
 const SignIn = () => {
     const { login } = useContext(AuthContext);
@@ -14,6 +15,8 @@ const SignIn = () => {
         identifier: '',
         password: '',
     });
+
+    const [showErrorModal, setShowErrorModal] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -27,8 +30,10 @@ const SignIn = () => {
             navigate("/");
         } catch (responseError) {
             setError(responseError)
+            setShowErrorModal(true);
         }
     };
+
 
     return (
         <main className='relative'>
@@ -63,6 +68,13 @@ const SignIn = () => {
 
                             <LoginButton label="Se Connecter" handleClick={handleSubmit} />
                         </form>
+
+                        {/* Error Modal */}
+                        <ErrorModal
+                            show={showErrorModal}
+                            onClose={() => setShowErrorModal(false)}
+                            errorMessage={error}
+                        />
 
                         <hr className="my-6 border-primary w-full" />
 

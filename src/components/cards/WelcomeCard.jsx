@@ -16,9 +16,9 @@ const WelcomeCard = () => {
                 </div>
 
                 <div className="my-6 mb-4 text-xl">
-                    Bienvenue dans Plaform. 
-                    Veuillez à présent vérifier votre courriel 
-                    pour activer votre compte et récupérer votre code d'intégration
+                Bienvenue dans Platform. 
+                Veuillez à présent vérifier votre courriel pour activer 
+                votre compte et récupérer votre code d'intégration à un réseau.
                 </div>
 
             </div>

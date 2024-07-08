@@ -42,13 +42,13 @@ export const communities = [
 ]
 
 export const competences = [
-    { value: 1, label: "Savoir utiliser les technologies numériques pour la gestion de l'information et des médias", },
-    { value: 2, label: "Savoir utiliser les technologies numériques pour communiquer et collaborer", },
-    { value: 3, label: "Faire preuse de pensée computationnelle et critique", },
-    { value: 4, label: "Utiliser les technologies numériques pour favoriser son insertion et son développement professionnel", },
-    { value: 5, label: "Mobiliser ses habiletés technologiques et numériques pour innover et créer", },
-    { value: 6, label: "Savoir gérer et piloter des projets avec une communauté de professionnel.le.s", },
-    { value: 7, label: "Accompagner – Former et apprendre avec les autres", },
+    { value: 1, label: "Gestion de l'information et des médias numériques", },
+    { value: 2, label: "Communication et collaboration numériques", },
+    { value: 3, label: "Pensée computationnelle et critique", },
+    { value: 4, label: "Insertion et développement professionnel numérique", },
+    { value: 5, label: "Innovation et création numériques", },
+    { value: 6, label: "Gestion de projets avec professionnel.le.s", },
+    { value: 7, label: "Accompagnement et formation", },
 ]
 
 export const networks = [
@@ -57,7 +57,7 @@ export const networks = [
     { name: "Communautés d'artisans", description: "Communauté d’artisan.e.s et d’artistes qui partagent des espaces de travail et des ressources pour la création artistique.", },
     { name: "Informatique", description: "Réseaux d'ateliers citoyens d'accès à la fabrication numérique et à l'accompagnement sur les nouvelles technologies.", },
     { name: "Makerspaces", description: "Atelier collaboratif dédié au prototypage, à la fabrication numérique et à des projets collaboratifs entre particuliers et entrepreneurs.", },
-    { name: "Intelligence Artificielle", description: "La communauté IA explore et promeut les technologies d'intelligence artificielle en abordant des sujets tels que l'apprentissage automatique, la vision par ordinateur, etc...", },
+    // { name: "Intelligence Artificielle", description: "La communauté IA explore et promeut les technologies d'intelligence artificielle en abordant des sujets tels que l'apprentissage automatique, la vision par ordinateur, etc...", },
     { name: "Technique et Professionnelle", description: "Centre de formation technique et professionnelle.", },
 ]
 

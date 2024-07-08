@@ -18,7 +18,7 @@ const Home = () => {
             <NetworkCard key={data.network.id} network={data.network} />
           ))) : (
           <div className="w-80">
-            {!userNetworks.length && <NoNetworkCard />}
+            {/* {!userNetworks.length && <NoNetworkCard />} */}
           </div>
         )}
       </div>
