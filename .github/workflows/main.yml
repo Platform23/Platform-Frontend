@@ -53,4 +53,3 @@ jobs:
             cd /srv/platform/
             docker-compose pull frontend
             docker-compose up -d --no-deps frontend
-            
