@@ -44,7 +44,7 @@ const EmailVerification = () => {
                     <p className='text-center text-2xl text-black font-roboto mt-5'>
                         Votre email a été vérifié. Vous pouvez désormais utiliser toutes les fonctionnalités de l&apos;application.
                     </p>
-                    <ForgotPasswordButton label="Accueil" handleClick={() => navigate('/')} />
+                    <ForgotPasswordButton label="Reseaux" handleClick={() => navigate('/reseaux')} />
                 </>
             );
         } else if (verificationStatus.message) {

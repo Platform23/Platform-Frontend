@@ -8,12 +8,15 @@ import DropdownInput from '../components/inputs/DropdownInput';
 import { communityProfile, communities, competences } from "../utils/constants"
 import { useCallback, useContext, useState } from "react"
 import AuthContext from '../hooks/AuthProvider';
+import ErrorModal from '../components/modal/ErrorModal';
+
 
 const SignUp = () => {
     const navigate = useNavigate();
     const [agree, setAgree] = useState(false);
     const { register } = useContext(AuthContext);
     const [error, setError] = useState(null);
+    const [showErrorModal, setShowErrorModal] = useState(false);
     const [formData, setFormData] = useState({
         email: '',
         pseudo: '',
@@ -38,6 +41,7 @@ const SignUp = () => {
         e.preventDefault();
         if (formData.password !== formData.confirm_password) {
             setError("Les mots de passe ne correspondent pas");
+            setShowErrorModal(true);
             return;
         }
 
@@ -46,6 +50,7 @@ const SignUp = () => {
             navigate("/bienvenue");
         } catch (responseError) {
             setError(responseError)
+            setShowErrorModal(true);
         }
     };
 
@@ -117,6 +122,13 @@ const SignUp = () => {
                                 handleClick={handleSubmit}
                                 label="Inscription" />
                         </form>
+
+                        {/* Error Modal */}
+                        <ErrorModal
+                            show={showErrorModal}
+                            onClose={() => setShowErrorModal(false)}
+                            errorMessage={error}
+                        />
 
                         <p className="mt-8 text-center text-lg font-semibold">Vous avez déjà un compte?<Link to="/connexion" className="text-primary font-bold"> Se connecter</Link></p>
                     </div>

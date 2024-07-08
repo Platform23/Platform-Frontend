@@ -16,7 +16,7 @@ const NetworkCard = ({ network }) => {
                     {network.name}
                 </h5>
 
-                <p className="block font-roboto text-base font-light leading-relaxed text-inherit line-clamp-3" >
+                <p className="block font-roboto text-base font-light leading-relaxed text-inherit line-clamp-3" class="line-clamp-3">
                     {network.description}
                 </p>
             </div>
