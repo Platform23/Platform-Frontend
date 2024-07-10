@@ -52,6 +52,6 @@ jobs:
           script: |
             cd /home/platform/docker
             docker-compose pull frontend
-            docker-compose down frontend
-            docker-compose up -d frontend
+            docker-compose down
+            docker-compose up -d
             
