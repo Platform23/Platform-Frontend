@@ -35,7 +35,9 @@ const SignUp = () => {
     }, []);
 
     const handleDropdownChange = useCallback((name, value) => {
-        setFormData((prevData) => ({ ...prevData, [name]: value.map(item => item.value) }));
+        // If value is null, set selectedValues to an empty array to prevent null error.
+        const selectedValues = value ? value.map(item => item.value) : [];
+        setFormData((prevData) => ({ ...prevData, [name]: selectedValues }));
     }, []);
 
     const handleSubmit = async (e) => {
