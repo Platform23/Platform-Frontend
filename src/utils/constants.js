@@ -61,5 +61,5 @@ export const networks = [
     { name: "Technique et Professionnelle", description: "Centre de formation technique et professionnelle.", },
 ]
 
-export const API_BASE_URL = "http://172.18.0.3:3333/api";
-export const BASE_URL = "http://172.18.0.3:3333";
+export const API_BASE_URL = "http://backend:3333/api";
+export const BASE_URL = "http://backend:3333/api";
