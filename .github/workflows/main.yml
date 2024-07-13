@@ -57,3 +57,4 @@ jobs:
             docker image prune -f
             docker-compose up -d --no-deps frontend
             docker-compose restart traefik 
+            
