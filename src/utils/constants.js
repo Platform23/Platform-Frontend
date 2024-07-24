@@ -43,11 +43,11 @@ export const communities = [
 
 export const competences = [
     { value: 1, label: "Gestion de l'information et des médias numériques", },
-    { value: 2, label: "Communication et collaboration numériques", },
+    { value: 2, label: "Compétences numériques et collaboratives", },
     { value: 3, label: "Pensée computationnelle et critique", },
     { value: 4, label: "Insertion et développement professionnel numérique", },
     { value: 5, label: "Innovation et création numériques", },
-    { value: 6, label: "Gestion de projets avec professionnel.le.s", },
+    { value: 6, label: "Gestion et pilotage de projets collaboratifs", },
     { value: 7, label: "Accompagnement et formation", },
 ]
 
