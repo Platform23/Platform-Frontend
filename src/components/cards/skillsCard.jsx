@@ -3,7 +3,7 @@ import { MdEdit } from "react-icons/md";
 import { MdAdd } from "react-icons/md";
 import SkillsDialog from "../dialogBox/SkillsDialog";
 
-const InterestsCard = ({ user }) => {
+const SkillsCard = ({ user }) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -28,4 +28,4 @@ const InterestsCard = ({ user }) => {
     )
 }
 
-export default InterestsCard
+export default SkillsCard

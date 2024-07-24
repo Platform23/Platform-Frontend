@@ -47,7 +47,7 @@ export const competences = [
     { value: 3, label: "Pensée computationnelle et critique", },
     { value: 4, label: "Insertion et développement professionnel numérique", },
     { value: 5, label: "Innovation et création numériques", },
-    { value: 6, label: "Gestion de projets avec professionnel.le.s", },
+    { value: 6, label: "Gestion et pilotage de projets collaboratifs", },
     { value: 7, label: "Accompagnement et formation", },
 ]
 

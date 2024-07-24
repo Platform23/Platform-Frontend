@@ -7,7 +7,7 @@ import {
     Typography,
     Input,
   } from "@material-tailwind/react";
-import DatePickerInput from "../inputs/DatePickerInput";
+// import DatePickerInput from "../inputs/DatePickerInput";
  
 
 
@@ -34,13 +34,13 @@ import DatePickerInput from "../inputs/DatePickerInput";
                     <Input placeholder="Intelligence Artiicielle" size="lg" className="rounded-lg border-3 border-primary focus:border-2" required/>
                     
                     <Typography className="-mb-2" variant="h6">
-                        Compétences
+                     Décrire la compétence
                     </Typography>
 
                     <Input 
                         size="lg" 
-                        className="rounded-lg bg-secondary h-60" 
-                        readOnly
+                        className="rounded-lg h-60 pb-7" 
+                        required
                     />
                     
                 </CardBody>
