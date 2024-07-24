@@ -14,7 +14,7 @@ const MentorRequest = ({agree, setAgree}) => {
                 onChange={handleCheckboxChange}
             />
                 <label htmlFor="agreeCheckbox" className="ml-2 block text-md font-semibold text-primary">
-                    Demande pour devenir mentor dans votre réseau
+                    Devenir mentor dans votre réseau
                 </label>
             </div>
         </div>

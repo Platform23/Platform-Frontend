@@ -8,7 +8,7 @@ import {
     Input,
 } from "@material-tailwind/react";
 import MentorRequest from "../checkbox/MentorRequestBox";
-import DatePickerInput from "../inputs/DatePickerInput";
+// import DatePickerInput from "../inputs/DatePickerInput";
 import { useUserProfile } from "../../hooks/useUserProfile";
 import { useState } from "react";
 
@@ -17,8 +17,8 @@ const ExperienceDialog = ({ open, handleOpen, userId }) => {
     const [formData, setFormData] = useState({
         title: '',
         organization: '',
-        startDate: '',
-        endDate: '',
+        // startDate: '',
+        // endDate: '',
     });
 
     const handleChange = (e) => {
@@ -48,7 +48,7 @@ const ExperienceDialog = ({ open, handleOpen, userId }) => {
                 <Card className="mx-auto w-full max-w-[30rem]">
                     <CardBody className="flex flex-col gap-4 mb-5">
                         <Typography variant="h4" className="text-primary font-semibold">
-                            Expérience professionnelle
+                            Expériences Professionnelles
                         </Typography>
 
                         <Typography className="-mb-2" variant="h6">
@@ -80,23 +80,23 @@ const ExperienceDialog = ({ open, handleOpen, userId }) => {
                         </Typography>
                         <Input size="lg" className="rounded-lg border-3 border-primary focus:border-2" /> */}
 
-                        <Typography className="-mb-2" variant="h6" required>
+                        {/* <Typography className="-mb-2" variant="h6" required>
                             Date de debut*
                         </Typography>
                         <DatePickerInput
                             name={'startDate'}
                             selectedDate={formData.startDate}
                             handleChange={(date) => handleDateChange(date, 'startDate')}
-                        />
+                        /> */}
 
-                        <Typography className="-mb-2" variant="h6">
+                        {/* <Typography className="-mb-2" variant="h6">
                             Date de fin
                         </Typography>
                         <DatePickerInput
                             name={'endDate'}
                             selectedDate={formData.endDate}
                             handleChange={(date) => handleDateChange(date, 'endDate')}
-                        />
+                        /> */}
 
                         <Typography className="-mb-4" variant="h6">
                             Devenir mentor
