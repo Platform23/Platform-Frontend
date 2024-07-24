@@ -73,7 +73,7 @@ const ProfileCard = ({ userId }) => {
                 </div>
                 <div className="text-lg mb-3 text-primary mt-5">
                     <i className="fas fa-briefcase mr-2 text-lg text-gray-500"></i>
-                    {user.profession ?? 'None'}
+                    {user.profession ?? ''}
                 </div>
             </div>
         </div>

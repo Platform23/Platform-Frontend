@@ -1,7 +1,7 @@
 import Banner from "../components/profile/Banner"
 import ProfileCard from "../components/cards/ProfileCard"
 import ExperienceCard from "../components/cards/ExperienceCard";
-import InterestsCard from "../components/cards/InterestsCard";
+import SkillsCard from "../components/cards/skillsCard";
 import { useUserProfile } from "../hooks/useUserProfile";
 import { useParams } from "react-router-dom";
 
@@ -32,7 +32,7 @@ const Profile = () => {
                                 userId={userId}
                             />
 
-                            <InterestsCard />
+                            <SkillsCard />
                         </div>
                     </div>
                 </div>

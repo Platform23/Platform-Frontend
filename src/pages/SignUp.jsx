@@ -101,7 +101,7 @@ const SignUp = () => {
                                 onChange={handleChange}
                             />
 
-                            <DropdownInput placeholder=' Compétences numérique et collaborative'
+                            <DropdownInput placeholder=' Compétences numériques et collaboratives'
                                 option={competences}
                                 onChange={(value) => handleDropdownChange('competences', value)}
                             />
