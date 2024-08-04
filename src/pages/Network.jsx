@@ -13,7 +13,8 @@ const Network = () => {
 
     return (
         <section className="pt-28 pl-5">
-            <div className="flex flex-col text-primary bg-white shadow-md bg-clip-border rounded-xl  md:w-1/2 sm:w-72 p-6">
+            {/* Network integration code inbox */}
+            {/* <div className="flex flex-col text-primary bg-white shadow-md bg-clip-border rounded-xl  md:w-1/2 sm:w-72 p-6">
                 <h3 className="block mb-2 font-montserrat text-xl font-semibold leading-snug tracking-normal">
                     Entrer votre votre code d’intégration pour intégrer un réseau
                 </h3>
@@ -33,7 +34,7 @@ const Network = () => {
                         Soumettre
                     </button>
                 </div>
-            </div>
+            </div> */}
 
             <div className="py-10">
                 <h3 className="text-primary font-montserrat font-bold text-xl leading-snug tracking-normal pb-3">
