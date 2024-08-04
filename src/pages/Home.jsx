@@ -3,6 +3,8 @@ import NetworkCard from "../components/cards/NetworkCard";
 import { useNetworks } from "../hooks/useNetworks";
 import NetworkCardShimmer from "../components/cards/NetworkCardShimmer";
 import { logo } from '../assets/images';
+import { platformDesc } from "../utils/constants"
+
 
 
 const Home = () => {
@@ -33,8 +35,9 @@ const Home = () => {
             src={logo}
         />
       </div>
-      <div>
-        
+      <div className="w-full p-20 bg-white-smoke">
+        <h1 className="text-primary text-lg font-bold text-center font-montserrat"> Platform: enhancing performances within communities of practices - 40B1-0_221552</h1>
+        <p className="text-md text-center font-montserrat">{platformDesc}</p>
       </div>
     </section >
   )
