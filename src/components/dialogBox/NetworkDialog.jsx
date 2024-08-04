@@ -11,7 +11,7 @@ import {
  
 
 
-  const NetworkDialog = ({open, handleOpen, networkName, networkDesc}) =>{
+  const NetworkDialog = ({open, handleOpen, networkName, networkDesc, openNetwork}) =>{
     
 
     return(
@@ -37,8 +37,8 @@ import {
                     <Button variant="gradient" onClick={handleOpen} className="bg-light-gray text-white font-bold font-montserrat items-end mx-1" >
                         Fermer
                     </Button>
-                    <Button variant="gradient" onClick={handleOpen} className="bg-primary text-white font-bold font-montserrat items-end mx-1" >
-                        Intégrer
+                    <Button variant="gradient" onClick={openNetwork} className="bg-primary text-white font-bold font-montserrat items-end mx-1" >
+                        Voir réseau
                     </Button>
                     
                 </CardFooter>
