@@ -1,3 +1,5 @@
+export const platformDesc = "Platform: enhancing performances within communities of practices est un outil numérique open source visant à servir de guide pour l’amélioration et l’évaluation des performances collaboratives en communautés de pratique les communautés fabrication numérique. Inspirée d’un modèle d’organisation de travail nommé kolòn, la plateforme numérique incarne une philosophie de travail basée sur l’économie de partage, l’entraide, la collaboration, l’engagement mutuel, l’accompagnement, le mentorat et la réciprocité. Bien plus qu'un simple espace en ligne, cet outil veut être un véritable catalyseur de production et de partage de savoirs autour du Numérique Social ! Le dispositif résultant servira de guide aux professionnel.le.s évoluant dans le secteur de la fabrication numérique pour la conception ou l’exécution de projet collaboratif, de partenariat, ou de formation en entreprise."
+
 export const Profile = {
     user: {
         code: "A2x9B4cR7d",
@@ -61,5 +63,10 @@ export const networks = [
     { name: "Technique et Professionnelle", description: "Centre de formation technique et professionnelle.", },
 ]
 
+// For production
 export const API_BASE_URL = "https://api.platformht.com/api";
 export const BASE_URL = "https://api.platformht.com";
+
+// For local test
+// export const API_BASE_URL = "http://localhost:3333/api";
+// export const BASE_URL = "http://localhost:3333";
