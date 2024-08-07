@@ -2,7 +2,7 @@ import NoNetworkCard from "../components/cards/NoNetworkCard";
 import NetworkCard from "../components/cards/NetworkCard";
 import { useNetworks } from "../hooks/useNetworks";
 import NetworkCardShimmer from "../components/cards/NetworkCardShimmer";
-import { logo } from '../assets/images';
+import { logoLarge } from '../assets/images';
 import { platformDesc } from "../utils/constants"
 
 
@@ -27,18 +27,20 @@ const Home = () => {
     //     )}
     //   </div>
 
-    <section className='h-screen flex justify-center items-center'>
-      <div className="w-full h-100">
-        <img
-            className="mx-auto mb-5"
-            alt="Logo"
-            src={logo}
-        />
-      </div>
-      <div className="w-full p-20 bg-white-smoke">
-        <h1 className="text-primary text-lg font-bold text-center font-montserrat"> Platform: enhancing performances within communities of practices - 40B1-0_221552</h1>
-        <p className="text-md text-center font-montserrat">{platformDesc}</p>
-      </div>
+    <section className='h-screen justify-center items-center'>
+      <div className="w-full ">
+        </div>
+          <div className="p-10 bg-white-smoke">
+            <img
+                className="mx-auto my-12"
+                alt="Logo"
+                src={logoLarge}
+                height={500}
+                width={500}
+            />
+            <h1 className="text-primary text-xl font-bold text-center font-montserrat mb-5"> Platform: enhancing performances within communities of practices - 40B1-0_221552</h1>
+            <p className="text-xl text-justify font-montserrat">{platformDesc}</p>
+        </div>
     </section >
   )
 }

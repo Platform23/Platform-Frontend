@@ -36,7 +36,7 @@ const Network = () => {
                 </div>
             </div> */}
 
-            <div className="py-10">
+            <div className="">
                 <h3 className="text-primary font-montserrat font-bold text-xl leading-snug tracking-normal pb-3">
                     Découvrez les différents réseaux
                 </h3>
