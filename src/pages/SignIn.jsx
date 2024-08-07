@@ -16,6 +16,7 @@ const SignIn = () => {
         password: '',
     });
 
+    const [buttonLabel, setButtonLabel] = useState("Se Connecter");
     const [showErrorModal, setShowErrorModal] = useState(false);
 
     const handleChange = (e) => {
@@ -26,11 +27,14 @@ const SignIn = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            setButtonLabel("Connexion...");
             await login(credentials);
             navigate("/");
+            setButtonLabel("Log In");
         } catch (responseError) {
             setError(responseError)
             setShowErrorModal(true);
+            setButtonLabel("Se Connecter");
         }
     };
 
@@ -66,7 +70,9 @@ const SignIn = () => {
                                 <Link to="/mot-de-passe-oublie" className="text-lg font-bold text-primary focus:text-bggray">Mot de passe oublié?</Link>
                             </div>
 
-                            <LoginButton label="Se Connecter" handleClick={handleSubmit} />
+                            <LoginButton 
+                                label={buttonLabel}
+                                handleClick={handleSubmit} />
                         </form>
 
                         {/* Error Modal */}
