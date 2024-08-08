@@ -39,7 +39,7 @@ const Home = () => {
                 width={500}
             />
             <h1 className="text-primary text-xl font-bold text-center font-montserrat mb-5"> Platform: enhancing performances within communities of practices - 40B1-0_221552</h1>
-            <p className="text-xl text-justify font-montserrat">{platformDesc}</p>
+            <p className="text-xl text-justify font-montserrat leading-8"> <i className="text-primary font-semibold">Platform: enhancing performances within communities of practices</i> {platformDesc}</p>
         </div>
     </section >
   )
