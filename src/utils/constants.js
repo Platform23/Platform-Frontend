@@ -1,4 +1,4 @@
-export const platformDesc = "Platform: enhancing performances within communities of practices est un outil numérique open source visant à servir de guide pour l’amélioration et l’évaluation des performances collaboratives en communautés de pratique les communautés fabrication numérique. Inspirée d’un modèle d’organisation de travail nommé kolòn, la plateforme numérique incarne une philosophie de travail basée sur l’économie de partage, l’entraide, la collaboration, l’engagement mutuel, l’accompagnement, le mentorat et la réciprocité. Bien plus qu'un simple espace en ligne, cet outil veut être un véritable catalyseur de production et de partage de savoirs autour du Numérique Social ! Le dispositif résultant servira de guide aux professionnel.le.s évoluant dans le secteur de la fabrication numérique pour la conception ou l’exécution de projet collaboratif, de partenariat, ou de formation en entreprise."
+export const platformDesc = " est un outil numérique open source visant à servir de guide pour l’amélioration et l’évaluation des performances collaboratives en communautés de pratique les communautés fabrication numérique. Inspirée d’un modèle d’organisation de travail nommé kolòn, la plateforme numérique incarne une philosophie de travail basée sur l’économie de partage, l’entraide, la collaboration, l’engagement mutuel, l’accompagnement, le mentorat et la réciprocité. Bien plus qu'un simple espace en ligne, cet outil veut être un véritable catalyseur de production et de partage de savoirs autour du Numérique Social ! Le dispositif résultant servira de guide aux professionnel.le.s évoluant dans le secteur de la fabrication numérique pour la conception ou l’exécution de projet collaboratif, de partenariat, ou de formation en entreprise."
 
 export const Profile = {
     user: {
@@ -34,13 +34,14 @@ export const communityProfile = [
 export const communities = [
     { value: 1, label: "Fablabs", },
     { value: 2, label: "Makerspaces", },
-    { value: 3, label: "Réparateurs", },
-    { value: 4, label: "Hackerspaces", },
-    { value: 5, label: "Living labs", },
-    { value: 6, label: "Communautés open source hardware", },
-    { value: 7, label: "Écoles de hackers et d'ateliers techniques", },
-    { value: 8, label: "Bibliothèque makerspaces", },
-    { value: 9, label: "Centre de formation professionnelle", },
+    { value: 3, label: "Repaircommunity", },
+    { value: 4, label: "TechHub", },
+    { value: 5, label: "Education", },
+    { value: 6, label: "Artisans", },
+    // { value: 6, label: "Communautés open source hardware", },
+    // { value: 7, label: "Écoles de hackers et d'ateliers techniques", },
+    // { value: 8, label: "Bibliothèque makerspaces", },
+    // { value: 9, label: "Centre de formation professionnelle", },
 ]
 
 export const competences = [
@@ -56,11 +57,11 @@ export const competences = [
 export const networks = [
     { name: "Fablabs", description: "Ateliers de fabrication équipés de machines-outils à commande numérique", },
     { name: "Hackerspaces", description: "Atelier collaboratif dédié aux projets utilisant l'électronique, la programmation, l'impression 3D etc.", },
-    { name: "Communautés d'artisans", description: "Communauté d’artisan.e.s et d’artistes qui partagent des espaces de travail et des ressources pour la création artistique.", },
-    { name: "Informatique", description: "Réseaux d'ateliers citoyens d'accès à la fabrication numérique et à l'accompagnement sur les nouvelles technologies.", },
-    { name: "Makerspaces", description: "Atelier collaboratif dédié au prototypage, à la fabrication numérique et à des projets collaboratifs entre particuliers et entrepreneurs.", },
+    { name: "Repair community", description: "Atelier collaboratif dédié au prototypage, à la fabrication numérique et à des projets collaboratifs entre particuliers et entrepreneurs.", },
+    { name: "TechHub", description: "Réseaux d'ateliers citoyens d'accès à la fabrication numérique et à l'accompagnement sur les nouvelles technologies.", },
+    { name: "Education", description: "Centre de formation technique et professionnelle.", },
+    { name: "Artisans", description: "Communauté d’artisan.e.s et d’artistes qui partagent des espaces de travail et des ressources pour la création artistique.", },
     // { name: "Intelligence Artificielle", description: "La communauté IA explore et promeut les technologies d'intelligence artificielle en abordant des sujets tels que l'apprentissage automatique, la vision par ordinateur, etc...", },
-    { name: "Technique et Professionnelle", description: "Centre de formation technique et professionnelle.", },
 ]
 
 // For production
