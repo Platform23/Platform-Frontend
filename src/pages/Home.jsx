@@ -27,21 +27,24 @@ const Home = () => {
     //     )}
     //   </div>
 
-    <section className='h-screen justify-center items-center'>
-      <div className="w-full ">
-        </div>
-          <div className="p-10 bg-white-smoke">
-            <img
-                className="mx-auto my-12"
-                alt="Logo"
-                src={logoLarge}
-                height={500}
-                width={500}
-            />
-            <h1 className="text-primary text-xl font-bold text-center font-montserrat mb-5"> Platform: enhancing performances within communities of practices - 40B1-0_221552</h1>
-            <p className="text-xl text-justify font-montserrat leading-8"> <i className="text-primary font-semibold">Platform: enhancing performances within communities of practices</i> {platformDesc}</p>
-        </div>
-    </section >
+    <section className='h-screen flex justify-center items-center'>
+      <div className="w-full p-10 bg-white-smoke">
+        <h1 className="text-primary text-xl font-bold font-montserrat mb-10 text-center">
+          Platform: enhancing performances within communities of practices - 40B1-0_221552
+        </h1>
+        <img
+          className="float-left mr-6 mb-4"
+          alt="Logo"
+          src={logoLarge}
+          height={400}
+          width={400}
+        />
+        <p className="text-xl text-justify font-montserrat leading-8">
+          <i className="text-primary font-semibold">Platform: enhancing performances within communities of practices</i> {platformDesc}
+        </p>
+      </div>
+    </section>
+
   )
 }
 

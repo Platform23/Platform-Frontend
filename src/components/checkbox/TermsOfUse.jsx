@@ -1,4 +1,4 @@
-import Policy from '../../utils/Politique_de_confidentialité.pdf'
+import Policy from '../../utils/Politique_de_confidentialité_Platform.pdf'
 
 
 const TermsOfUse = ({agree, setAgree}) => {
