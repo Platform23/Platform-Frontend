@@ -29,7 +29,7 @@ const Home = () => {
 
     <section className='h-screen flex justify-center items-center'>
       <div className="w-full p-10 bg-white-smoke">
-        <h1 className="text-primary text-xl font-bold font-montserrat mb-10 text-center">
+        <h1 className="text-primary text-xl font-bold font-montserrat my-12 text-center">
           Platform: enhancing performances within communities of practices - 40B1-0_221552
         </h1>
         <img
