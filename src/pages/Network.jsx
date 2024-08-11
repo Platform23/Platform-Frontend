@@ -42,7 +42,7 @@ const Network = () => {
                 </h3>
                 <div className="flex justify-center md:justify-start flex-wrap gap-6">
                     {allNetworks.map((network) => (
-                        <div key={network.id} className="w-full md:w-1/2 px-3 mb-6">
+                        <div key={network.id} className="w-full md:w-1/4 px-3 mb-6">
                             <NetworkCard network={network} />
                         </div>
                     ))}
