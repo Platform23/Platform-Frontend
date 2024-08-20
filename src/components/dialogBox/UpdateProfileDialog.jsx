@@ -92,7 +92,7 @@ const UpdateProfileDialog = ({ open, handleOpen, userId }) => {
                             className="rounded-lg border-3 border-primary focus:border-2"
                             value={formData.fullName}
                             onChange={handleChange}
-                            required />
+                            />
 
                         <Typography className="-mb-2" variant="h6">
                             Profession
@@ -104,7 +104,7 @@ const UpdateProfileDialog = ({ open, handleOpen, userId }) => {
                             className="rounded-lg border-3 border-primary focus:border-2"
                             value={formData.profession}
                             onChange={handleChange}
-                            required />
+                            />
 
                         <Typography className="-mb-2" variant="h6">
                             Photo de profil

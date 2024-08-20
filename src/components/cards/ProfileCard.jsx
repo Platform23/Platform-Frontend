@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { userIcon } from "../../assets/images";
 import UpdateProfileDialog from '../dialogBox/UpdateProfileDialog';
 import { API_BASE_URL } from "../../utils/constants";
 import { useUserProfile } from "../../hooks/useUserProfile";
@@ -24,9 +25,9 @@ const ProfileCard = ({ userId }) => {
                         {/* Profile picture */}
                         <img
                             alt="avatar"
-                            src={user.avatar ? `${API_BASE_URL}/uploads/avatars/${user.avatar}` : `https://api.dicebear.com/8.x/adventurer/svg?seed=${user.pseudo}`}
+                            src={user.avatar ? `${API_BASE_URL}/uploads/avatars/${user.avatar}` : `${userIcon}`}
                             className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
-                            style={{ maxWidth: "150px" }}
+                            style={{ width: "150px", height: "150px", objectFit: "cover" }}
                         />
                     </div>
                 </div>
