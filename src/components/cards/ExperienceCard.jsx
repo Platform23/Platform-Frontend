@@ -12,16 +12,16 @@ const ExperienceCard = ({ experience }) => {
     }
 
     return (
-        <div className="m-5 shadow-md border-2 rounded-lg border-bggray">
+        <div className="p-5 my-3 shadow-md border-2 rounded-lg border-bggray w-full">
             <h5 className="mb-4 text-lg leading-relaxed text-primary font-bold font-montserrat">
                 {experience.title}
             </h5>
             <p className='font-montserrat text-base font-light leading-relaxed text-inherit'>
                 {experience.organization}
             </p>
-            <button onClick={handleOpen} className="justify-end">
+            {/* <button onClick={handleOpen} className="justify-end">
                 <MdAdd className="w-6 h-6 text-primary" />
-            </button>
+            </button> */}
         </div>
     )
 }
