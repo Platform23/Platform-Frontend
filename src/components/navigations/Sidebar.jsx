@@ -1,4 +1,4 @@
-import { logo } from '../../assets/images';
+import { logo, userIcon } from '../../assets/images';
 import { FiLogOut } from "react-icons/fi";
 import { TiHome } from "react-icons/ti";
 import { FaUsers } from "react-icons/fa";
@@ -87,7 +87,7 @@ const Sidebar = () => {
                         <div className="flex items-center gap-x-4 cursor-pointer" onClick={() => navigate(`/profil/${user.uuid}`)}>
                             <img
                                 alt="avatar"
-                                src={user.avatar ? `${API_BASE_URL}/uploads/avatars/${user.avatar}` : `https://api.dicebear.com/8.x/adventurer/svg?seed=${user.pseudo}`} className="w-12 h-12 rounded-full" />
+                                src={user.avatar ? `${API_BASE_URL}/uploads/avatars/${user.avatar}` : `${userIcon}`} className="w-12 h-12 rounded-full" />
                             <div className="font-roboto text-base font-medium leading-relaxed text-inherit">
                                 <span className="block">{user.pseudo}</span>
                                 <a

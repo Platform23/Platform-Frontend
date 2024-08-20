@@ -17,8 +17,8 @@ const ExperienceDialog = ({ open, handleOpen, userId }) => {
     const [formData, setFormData] = useState({
         title: '',
         organization: '',
-        // startDate: '',
-        // endDate: '',
+        startDate: '',
+        endDate: '',
     });
 
     const handleChange = (e) => {
@@ -56,7 +56,7 @@ const ExperienceDialog = ({ open, handleOpen, userId }) => {
                         </Typography>
                         <Input
                             name="title"
-                            placeholder="Certifications"
+                            placeholder="Manager"
                             size="lg"
                             className="rounded-lg border-3 border-primary focus:border-2"
                             onChange={handleChange}
