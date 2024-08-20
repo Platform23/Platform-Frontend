@@ -4,7 +4,7 @@ import { API_BASE_URL } from '../utils/constants';
 
 export const useUserProfile = (userId) => {
     const [user, setUser] = useState(null);
-    const [userXp, setUserXp] = useState(null);
+    // const [userXp, setUserXp] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -93,5 +93,5 @@ export const useUserProfile = (userId) => {
         }
     };
 
-    return { user, userXp, loading, error, fetchUserProfile, updateUserProfile, addUserExperience, fetchUserExperience };
+    return { user, loading, error, fetchUserProfile, updateUserProfile, addUserExperience, fetchUserExperience };
 };

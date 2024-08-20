@@ -1,13 +1,13 @@
 import { useState } from "react"
 import { MdAdd } from "react-icons/md";
 import ExperienceDialog from "../dialogBox/ExperienceDialog";
+import ExperienceCard from "../cards/ExperienceCard"
 import { useUserProfile } from "../../hooks/useUserProfile";
 
 
 const ExperienceSection = ({ userId }) => {
-    const { loading } = useUserProfile(userId);
-    // Control dialog visibily, set false as default
-    const [isOpen, setIsOpen] = useState(false);
+    const { loading, user} = useUserProfile(userId);
+    // const [isOpen, setIsOpen] = useState(false);
 
     const handleOpen = () => {
         setIsOpen(!isOpen);
@@ -28,6 +28,11 @@ const ExperienceSection = ({ userId }) => {
                         <MdAdd className="w-6 h-6 text-primary" />
                     </button>
                 </div>
+                {user.experiences.map((experience) => (
+                    // <NetworkCard key={network.id} network={network} />
+                    <ExperienceCard key={experience.id} experience={experience}/>
+                ))}
+
                 <ExperienceDialog
                     open={isOpen}
                     handleOpen={handleOpen}
