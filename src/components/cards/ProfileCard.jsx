@@ -14,7 +14,17 @@ const ProfileCard = ({ userId }) => {
     }
 
     if (loading) {
-        return;
+        return <div>Data not found.</div>;
+    }
+
+    if (!user) {
+        // Handle the case where user data is not available
+        return (
+
+            <div className="text-xl font-semibold leading-normal my-5 text-primary text-center"> 
+                Profil utilisateur introuvable.
+            </div>
+        );
     }
 
     return (

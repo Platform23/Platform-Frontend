@@ -14,7 +14,16 @@ const ExperienceSection = ({ userId }) => {
     }
 
     if (loading) {
-        return;
+        return <div>Data not found.</div>;
+    }
+
+    if (!user) {
+        // Handle the case where user data is not available
+        return (
+            <div className="text-xl font-semibold leading-normal my-5 text-primary text-center"> 
+                Expériences utilisateur introuvable.
+            </div>
+        );
     }
 
     return (
@@ -28,10 +37,16 @@ const ExperienceSection = ({ userId }) => {
                         <MdAdd className="w-6 h-6 text-primary" />
                     </button>
                 </div>
-                {user.experiences.map((experience) => (
-                    // <NetworkCard key={network.id} network={network} />
-                    <ExperienceCard key={experience.id} experience={experience}/>
-                ))}
+                
+                {user.experiences && user.experiences.length > 0 ? (
+                    user.experiences.map((experience) => (
+                        <ExperienceCard key={experience.id} experience={experience} />
+                    ))
+                ) : (
+                    <p className="text-center w-full text-primary">
+                        No experiences found.
+                    </p>
+                )}
 
                 <ExperienceDialog
                     open={isOpen}

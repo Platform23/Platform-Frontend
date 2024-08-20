@@ -9,9 +9,10 @@ const Profile = () => {
     const { userId } = useParams()
     const { user, loading } = useUserProfile(userId);
 
-    if (loading) {
-        return;
-    }
+    // if (loading) {
+    //     // return;
+    //     console.log("======>User not verified-----")
+    // }
 
     return (
         <main className='relative'>

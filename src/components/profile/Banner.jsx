@@ -2,16 +2,17 @@ import { API_BASE_URL } from '../../utils/constants';
 
 
 const Banner = ({ user }) => {
+    const backgroundUrl = user && user.background
+    ? `${API_BASE_URL}/uploads/backgrounds/${user.background}`
+    : 'https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80';
+    
     return (
         <>
             <div
                 className="absolute top-0 w-full h-full bg-center bg-cover"
                 style={{
                     backgroundImage:
-                        `url(${user.background
-                            ? `${API_BASE_URL}/uploads/backgrounds/${user.background}`
-                            : 'https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80'
-                        })`,
+                        `url(${backgroundUrl})`,
                 }}
             >
                 <span
