@@ -7,7 +7,7 @@ import { useUserProfile } from "../../hooks/useUserProfile";
 
 const ExperienceSection = ({ userId }) => {
     const { loading, user} = useUserProfile(userId);
-    // const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     const handleOpen = () => {
         setIsOpen(!isOpen);
