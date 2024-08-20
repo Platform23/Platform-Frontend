@@ -6,8 +6,6 @@ import { useUserProfile } from "../../hooks/useUserProfile";
 
 const ExperienceCard = ({ experience }) => {
 
-    const { loading } = useUserProfile(userId);
-
     const handleOpen = () => {
         // setIsOpen(!isOpen);
         console.log(`Remove experience ${experience.title}`);

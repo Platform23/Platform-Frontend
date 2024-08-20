@@ -2,29 +2,29 @@ import { useState } from "react"
 import { MdEdit } from "react-icons/md";
 import { MdAdd } from "react-icons/md";
 import SkillsDialog from "../dialogBox/SkillsDialog";
-import { useUserProfile } from "../../hooks/useUserProfile";
+// import { useUserProfile } from "../../hooks/useUserProfile";
 
 
 const SkillsCard = ({ userId }) => {
-    const { loading, user} = useUserProfile(userId);
+    // const { loading, user} = useUserProfile(userId);
     const [isOpen, setIsOpen] = useState(false);
 
     const handleOpen = () => {
         setIsOpen(!isOpen);
     }
 
-    if (loading) {
-        return <div>Data not found.</div>;
-    }
+    // if (loading) {
+    //     return <div>Data not found.</div>;
+    // }
 
-    if (!user) {
-        // Handle the case where user data is not available
-        return (
-            <div className="text-xl font-semibold leading-normal my-5 text-primary text-center"> 
-                Compétences utilisateur introuvable.
-            </div>
-        );
-    }
+    // if (!user) {
+    //     // Handle the case where user data is not available
+    //     return (
+    //         <div className="text-xl font-semibold leading-normal my-5 text-primary text-center"> 
+    //             Compétences utilisateur introuvable.
+    //         </div>
+    //     );
+    // }
 
     return (
         <div className="my-5 py-10 shadow-xl border-2 rounded-lg border-bggray">
