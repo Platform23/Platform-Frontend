@@ -13,9 +13,9 @@ const NetworkDetailBar = ({ name, description, users, subjects }) => {
                 <h3 className="font-montserrat text-xl font-semibold leading-snug tracking-normal">
                     {name}
                 </h3>
-                <p className="font-roboto text-base font-light leading-relaxed text-inherit">
+                {/* <p className="font-roboto text-base font-light leading-relaxed text-inherit">
                     {description}
-                </p>
+                </p> */}
             </div>
 
             <nav className="flex flex-col flex-1 overflow-y-auto pt-10">

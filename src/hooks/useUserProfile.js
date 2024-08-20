@@ -4,11 +4,13 @@ import { API_BASE_URL } from '../utils/constants';
 
 export const useUserProfile = (userId) => {
     const [user, setUser] = useState(null);
+    // const [userXp, setUserXp] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         fetchUserProfile();
+        fetchUserExperience();
     }, [userId]);
 
     const fetchUserProfile = async () => {
@@ -72,5 +74,24 @@ export const useUserProfile = (userId) => {
         }
     };
 
-    return { user, loading, error, fetchUserProfile, updateUserProfile, addUserExperience };
+    const fetchUserExperience = async () => {
+        try {
+            setLoading(true);
+            const response = await fetch(`${API_BASE_URL}/experiences/${userId}`, {
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            const data = await handleResponse(response);
+            setUser(data.data);
+        } catch (err) {
+            setError(error.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    return { user, loading, error, fetchUserProfile, updateUserProfile, addUserExperience, fetchUserExperience };
 };

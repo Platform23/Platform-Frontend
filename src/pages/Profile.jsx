@@ -1,6 +1,6 @@
 import Banner from "../components/profile/Banner"
 import ProfileCard from "../components/cards/ProfileCard"
-import ExperienceCard from "../components/cards/ExperienceCard";
+import ExperienceSection from "../components/profile/ExperienceSection";
 import SkillsCard from "../components/cards/skillsCard";
 import { useUserProfile } from "../hooks/useUserProfile";
 import { useParams } from "react-router-dom";
@@ -28,7 +28,7 @@ const Profile = () => {
                                 userId={userId}
                             />
 
-                            <ExperienceCard
+                            <ExperienceSection
                                 userId={userId}
                             />
 

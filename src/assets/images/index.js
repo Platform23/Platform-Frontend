@@ -1,5 +1,5 @@
 import logo from './logo.png';
 import logoLarge from './logo-large.png';
+import userIcon from './userIcon.png'
 
-export {logo}
-export {logoLarge}
+export {logo, logoLarge, userIcon}
