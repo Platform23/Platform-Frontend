@@ -28,7 +28,7 @@ const ExperienceSection = ({ userId }) => {
 
     return (
         <div className="my-5 py-10 shadow-xl border-2 rounded-lg border-bggray">
-            <div className="">
+            <div className="px-5">
                 <div className="flex justify-between mb-4 w-full lg:w-9/12 px-4">
                     <h2 className="mb-4 text-lg leading-relaxed text-primary font-bold font-montserrat">
                         Expériences Professionnelles
@@ -38,14 +38,10 @@ const ExperienceSection = ({ userId }) => {
                     </button>
                 </div>
                 
-                {user.experiences && user.experiences.length > 0 ? (
+                {(
                     user.experiences.map((experience) => (
-                        <ExperienceCard key={experience.id} experience={experience} />
+                        <ExperienceCard key={experience.id} userId={userId} experience={experience} />
                     ))
-                ) : (
-                    <p className="text-center w-full text-primary">
-                        No experiences found.
-                    </p>
                 )}
 
                 <ExperienceDialog
