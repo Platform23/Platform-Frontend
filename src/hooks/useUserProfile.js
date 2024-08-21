@@ -93,5 +93,34 @@ export const useUserProfile = (userId) => {
         }
     };
 
-    return { user, loading, error, fetchUserProfile, updateUserProfile, addUserExperience, fetchUserExperience };
+    const removeUserExperience = async (experienceId) => {
+        try {
+            setLoading(true);
+            const response = await fetch(`${API_BASE_URL}/experiences/${experienceId}`, {
+                method: "DELETE",
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            const data = await handleResponse(response);
+            setUser(data.data);
+        } catch (err) {
+            setError(error.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    return { 
+        user, 
+        loading, 
+        error, 
+        fetchUserProfile, 
+        updateUserProfile, 
+        addUserExperience, 
+        fetchUserExperience, 
+        removeUserExperience 
+    };
 };

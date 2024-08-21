@@ -17,8 +17,8 @@ const ExperienceDialog = ({ open, handleOpen, userId }) => {
     const [formData, setFormData] = useState({
         title: '',
         organization: '',
-        startDate: '',
-        endDate: '',
+        startDate: '01/01/2001',
+        endDate: '01/01/2001',
     });
 
     const handleChange = (e) => {
