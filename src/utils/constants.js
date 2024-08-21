@@ -83,9 +83,9 @@ export const networks = [
 ]
 
 // For production
-// export const API_BASE_URL = "https://api.platformht.com/api";
-// export const BASE_URL = "https://api.platformht.com";
+export const API_BASE_URL = "https://api.platformht.com/api";
+export const BASE_URL = "https://api.platformht.com";
 
 // For local test
-export const API_BASE_URL = "http://localhost:3333/api";
-export const BASE_URL = "http://localhost:3333";
+// export const API_BASE_URL = "http://localhost:3333/api";
+// export const BASE_URL = "http://localhost:3333";
