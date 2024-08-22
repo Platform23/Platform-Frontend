@@ -1,6 +1,4 @@
-// import { useState } from "react"
-// import { MdRemove } from "react-icons/md";
-
+import React from "react";
 
 const SkillsCard = ({ skill }) => {
 
