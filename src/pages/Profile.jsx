@@ -1,7 +1,6 @@
 import Banner from "../components/profile/Banner"
 import ProfileCard from "../components/cards/ProfileCard"
 import ExperienceSection from "../components/profile/ExperienceSection";
-import SkillsCard from "../components/cards/SkillsCard";
 import SkillsSection from "../components/profile/SkillsSection";
 import { useUserProfile } from "../hooks/useUserProfile";
 import { useParams } from "react-router-dom";
