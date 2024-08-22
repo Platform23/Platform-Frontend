@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { MdRemove } from "react-icons/md";
-import ExperienceDialog from "../dialogBox/ExperienceDialog";
 import { useUserProfile } from "../../hooks/useUserProfile";
 
 
