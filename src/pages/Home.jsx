@@ -29,7 +29,7 @@ const Home = () => {
 
     <section className='h-screen flex justify-center items-center'>
       <div className="w-full p-10 bg-white-smoke">
-        <h1 className="text-primary text-xl font-bold font-montserrat my-12 mt-5 text-center">
+        <h1 className="text-primary text-xl font-bold font-montserrat mb-12 mt-16 text-center">
           Platform: enhancing performances within communities of practices - 40B1-0_221552
         </h1>
         <img
@@ -46,7 +46,7 @@ const Home = () => {
           {/* {platformDesc} */}
           {/* Render the text with the appropriate line breaks */}
           {platformDesc.split('\n').map((line, index) => (
-                <p key={index} className="mb-4s">
+                <p key={index} className="mb-4">
                     {line}
                 </p>
             ))}
