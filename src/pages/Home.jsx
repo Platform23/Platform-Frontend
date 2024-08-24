@@ -44,8 +44,9 @@ const Home = () => {
             Platform: enhancing performances within communities of practices
           </i> 
           {/* {platformDesc} */}
+          {/* Render the text with the appropriate line breaks */}
           {platformDesc.split('\n').map((line, index) => (
-                <p key={index} className="text-paragraph">
+                <p key={index} className="leading-10">
                     {line}
                 </p>
             ))}
