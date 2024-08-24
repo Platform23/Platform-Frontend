@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { MdEdit } from "react-icons/md";
 import { MdAdd } from "react-icons/md";
-import SkillsCard from "../cards/SkillsCard";
+import SkillsCard from "../cards/skillsCard";
 // import SkillsDialog from "../dialogBox/SkillsDialog";
 import { useUserProfile } from "../../hooks/useUserProfile";
 
