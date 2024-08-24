@@ -40,7 +40,15 @@ const Home = () => {
           width={400}
         />
         <p className="text-xl text-justify font-montserrat leading-8">
-          <i className="text-primary font-semibold">Platform: enhancing performances within communities of practices</i> {platformDesc}
+          <i className="text-primary font-semibold">
+            Platform: enhancing performances within communities of practices
+          </i> 
+          {/* {platformDesc} */}
+          {platformDesc.split('\n').map((line, index) => (
+                <p key={index} className="text-paragraph">
+                    {line}
+                </p>
+            ))}
         </p>
       </div>
     </section>
