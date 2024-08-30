@@ -37,7 +37,7 @@ const ProfileCard = ({ userId }) => {
                             alt="avatar"
                             src={user.avatar ? `${API_BASE_URL}/uploads/avatars/${user.avatar}` : `${userIcon}`}
                             className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
-                            style={{ maxWidth: "150px", objectFit: "cover" }}
+                            style={{ maxWidth: "150px", maxHeight: "150px", objectFit: "cover" }}
                         />
                     </div>
                 </div>
