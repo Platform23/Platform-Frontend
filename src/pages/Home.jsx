@@ -57,10 +57,10 @@ const Home = () => {
 
         </div>
         <h4 className="text-primary font-bold font-montserrat mb-4">
-          Voir nos politiques de confidentialités
+          Voir nos politiques de confidentialité
         </h4>
         <p className="block text-md font-semibold text-primary">
-          <a href={Policy} target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline">Politique de confidentialités</a> des données de Platform
+          <a href={Policy} target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline">Politique de confidentialité</a> des données de Platform
         </p>
       </div>
     </section>
