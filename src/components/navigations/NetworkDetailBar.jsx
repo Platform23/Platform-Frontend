@@ -1,14 +1,29 @@
+import React, { useState } from 'react';
 import useNavStore from "../../store/navStore";
+import ViewUserDialog from '../dialogBox/ViewUserDialog'
+
 
 const NetworkDetailBar = ({ name, description, users, subjects }) => {
     const { setTitle, title } = useNavStore();
+    const [selectedUser, setSelectedUser] = useState(null); // State to track selected user for dialog
+    const [dialogOpen, setDialogOpen] = useState(false); // State to track dialog open/close
 
     const handleClick = (item) => {
         setTitle(item);
     };
 
+    const handleOpenDialog = (user) => {
+        setSelectedUser(user); // Set the selected user
+        setDialogOpen(true); // Open the dialog
+    };
+
+    const handleCloseDialog = () => {
+        setDialogOpen(false); // Close the dialog
+        setSelectedUser(null); // Clear the selected user
+    };
+
     return (
-        <div className="hidden md:flex flex-col w-64 bg-white text-primary pt-28 px-8 h-screen">
+        <div className="hidden md:flex flex-col w-64 bg-white text-primary pt-14 px-8 h-screen">
             <div className='flex flex-col'>
                 <h3 className="font-montserrat text-xl font-semibold leading-snug tracking-normal">
                     {name}
@@ -59,6 +74,18 @@ const NetworkDetailBar = ({ name, description, users, subjects }) => {
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                                         </svg>
                                         {user.pseudo}
+                                        
+                                        <svg
+                                            onClick={() => handleOpenDialog(user)} // Open the dialog on click
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            strokeWidth="1.5"
+                                            stroke="currentColor"
+                                            className="w-6 h-6 ml-auto cursor-pointer hover:text-blue-500"
+                                        >
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                        </svg>
                                     </div>
                                 </li>
                             ))
@@ -66,6 +93,13 @@ const NetworkDetailBar = ({ name, description, users, subjects }) => {
                     </ul>
                 </div>
             </nav>
+            {selectedUser && (
+                <ViewUserDialog
+                    open={dialogOpen}
+                    onClose={handleCloseDialog}
+                    user={selectedUser} // Pass the selected user to the dialog
+                />
+            )}
         </div>
     )
 }
