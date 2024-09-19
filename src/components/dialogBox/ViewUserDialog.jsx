@@ -6,8 +6,8 @@ import {
   DialogTitle,
   TextField,
   Button,
-  Grid2,
 } from '@mui/material';
+import Grid from '@mui/material/Grid2'
 import { useUserProfile } from '../../hooks/useUserProfile';
 
 const ViewUserDialog = ({ open, onClose, user }) => {
@@ -58,8 +58,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
     <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
       <DialogTitle sx={{ fontSize: '25px', color: '#25434d', fontWeight: 'bold', marginLeft: '20px' }}>Details</DialogTitle>
       <DialogContent>
-        <Grid2 container spacing={2} sx={{ padding: '20px' }}>
-          <Grid2 item xs={6}>
+        <Grid container spacing={2} sx={{ padding: '20px' }}>
+          <Grid size={6}>
             <TextField
               label="Nom complet"
               value={userInfo?.fullName || ''}
@@ -67,8 +67,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               InputProps={{ readOnly: true }}
               variant="outlined"
             />
-          </Grid2>
-          <Grid2 item xs={6}>
+          </Grid>
+          <Grid size={6}>
             <TextField
               label="Pseudo"
               value={userInfo?.pseudo || ''}
@@ -76,8 +76,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               InputProps={{ readOnly: true }}
               variant="outlined"
             />
-          </Grid2>
-          <Grid2 item xs={6}>
+          </Grid>
+          <Grid size={6}>
             <TextField
               label="Email"
               value={userInfo?.email || ''}
@@ -85,8 +85,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               InputProps={{ readOnly: true }}
               variant="outlined"
             />
-          </Grid2>
-          <Grid2 item xs={6}>
+          </Grid>
+          <Grid size={6}>
             <TextField
               label="Profession"
               value={userInfo?.profession || ''}
@@ -94,8 +94,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               InputProps={{ readOnly: true }}
               variant="outlined"
             />
-          </Grid2>
-          {/* <Grid2 item xs={12}>
+          </Grid>
+          {/* <Grid size={12}>
             <TextField
               label="Rôle"
               value={userInfo?.role === 3 ? 'Administrateur' : 'Utilisateur'}
@@ -103,8 +103,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               InputProps={{ readOnly: true }}
               variant="outlined"
             />
-          </Grid2> */}
-          <Grid2 item xs={12}>
+          </Grid> */}
+          <Grid size={12}>
             <TextField
               label="Compétences"
               value={userInfo?.competences?.map((compt) => compt.name).join('\n') || 'Aucune compétence'}
@@ -113,8 +113,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               variant="outlined"
               multiline
             />
-          </Grid2>
-          <Grid2 item xs={12}>
+          </Grid>
+          <Grid size={12}>
             <TextField
               label="Profile"
               value={userInfo?.profiles?.map((prof) => prof.name).join('\n') || 'Aucun profile'}
@@ -123,8 +123,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               variant="outlined"
               multiline
             />
-          </Grid2>
-          <Grid2 item xs={12}>
+          </Grid>
+          <Grid size={12}>
             <TextField
               label="Communauté d'appartenance"
               value={userInfo?.communities?.map((commun) => commun.name).join('\n') || 'Aucune communauté'}
@@ -133,8 +133,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               variant="outlined"
               multiline
             />
-          </Grid2>
-          <Grid2 item xs={12}>
+          </Grid>
+          <Grid size={12}>
             <TextField
               label="Expériences"
               value={userInfo?.experiences?.map((exp) => `${exp.title} à ${exp.organization}`).join('\n') || 'Aucune expérience'}
@@ -143,8 +143,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               variant="outlined"
               multiline
             />
-          </Grid2>
-        </Grid2>
+          </Grid>
+        </Grid>
       </DialogContent>
 
       <DialogActions>
