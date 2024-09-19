@@ -6,7 +6,7 @@ import {
   DialogTitle,
   TextField,
   Button,
-  Grid,
+  Grid2,
 } from '@mui/material';
 import { useUserProfile } from '../../hooks/useUserProfile';
 
@@ -27,7 +27,7 @@ const ViewUserDialog = ({ open, onClose, user }) => {
       };
       fetchData();
     }
-  }, [open, user.uuid, fetchUserInfo]);
+  }, [open, 'a08645b6-edc3-44a3-80b8-30d4dea04a34', fetchUserInfo]);
 
   // Reset the `fetched` flag when the dialog closes to allow re-fetching if reopened
   useEffect(() => {
@@ -35,6 +35,10 @@ const ViewUserDialog = ({ open, onClose, user }) => {
       fetched.current = false;
     }
   }, [open]);
+
+  console.log(user.id);
+  console.log(user.pseudo);
+  console.log(userInfo);
 
   if (loading) {
     return <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
@@ -54,8 +58,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
     <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
       <DialogTitle sx={{ fontSize: '25px', color: '#25434d', fontWeight: 'bold', marginLeft: '20px' }}>Details</DialogTitle>
       <DialogContent>
-        <Grid container spacing={2} sx={{ padding: '20px' }}>
-          <Grid item xs={6}>
+        <Grid2 container spacing={2} sx={{ padding: '20px' }}>
+          <Grid2 item xs={6}>
             <TextField
               label="Nom complet"
               value={userInfo?.fullName || ''}
@@ -63,8 +67,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               InputProps={{ readOnly: true }}
               variant="outlined"
             />
-          </Grid>
-          <Grid item xs={6}>
+          </Grid2>
+          <Grid2 item xs={6}>
             <TextField
               label="Pseudo"
               value={userInfo?.pseudo || ''}
@@ -72,8 +76,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               InputProps={{ readOnly: true }}
               variant="outlined"
             />
-          </Grid>
-          <Grid item xs={6}>
+          </Grid2>
+          <Grid2 item xs={6}>
             <TextField
               label="Email"
               value={userInfo?.email || ''}
@@ -81,8 +85,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               InputProps={{ readOnly: true }}
               variant="outlined"
             />
-          </Grid>
-          <Grid item xs={6}>
+          </Grid2>
+          <Grid2 item xs={6}>
             <TextField
               label="Profession"
               value={userInfo?.profession || ''}
@@ -90,8 +94,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               InputProps={{ readOnly: true }}
               variant="outlined"
             />
-          </Grid>
-          {/* <Grid item xs={12}>
+          </Grid2>
+          {/* <Grid2 item xs={12}>
             <TextField
               label="Rôle"
               value={userInfo?.role === 3 ? 'Administrateur' : 'Utilisateur'}
@@ -99,8 +103,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               InputProps={{ readOnly: true }}
               variant="outlined"
             />
-          </Grid> */}
-          <Grid item xs={12}>
+          </Grid2> */}
+          <Grid2 item xs={12}>
             <TextField
               label="Compétences"
               value={userInfo?.competences?.map((compt) => compt.name).join('\n') || 'Aucune compétence'}
@@ -109,8 +113,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               variant="outlined"
               multiline
             />
-          </Grid>
-          <Grid item xs={12}>
+          </Grid2>
+          <Grid2 item xs={12}>
             <TextField
               label="Profile"
               value={userInfo?.profiles?.map((prof) => prof.name).join('\n') || 'Aucun profile'}
@@ -119,8 +123,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               variant="outlined"
               multiline
             />
-          </Grid>
-          <Grid item xs={12}>
+          </Grid2>
+          <Grid2 item xs={12}>
             <TextField
               label="Communauté d'appartenance"
               value={userInfo?.communities?.map((commun) => commun.name).join('\n') || 'Aucune communauté'}
@@ -129,8 +133,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               variant="outlined"
               multiline
             />
-          </Grid>
-          <Grid item xs={12}>
+          </Grid2>
+          <Grid2 item xs={12}>
             <TextField
               label="Expériences"
               value={userInfo?.experiences?.map((exp) => `${exp.title} à ${exp.organization}`).join('\n') || 'Aucune expérience'}
@@ -139,8 +143,8 @@ const ViewUserDialog = ({ open, onClose, user }) => {
               variant="outlined"
               multiline
             />
-          </Grid>
-        </Grid>
+          </Grid2>
+        </Grid2>
       </DialogContent>
 
       <DialogActions>
