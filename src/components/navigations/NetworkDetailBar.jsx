@@ -1,26 +1,31 @@
 import React, { useState } from 'react';
 import useNavStore from "../../store/navStore";
 import ViewUserDialog from '../dialogBox/ViewUserDialog'
+import Profile from '../../pages/Profile'
 
 
 const NetworkDetailBar = ({ name, description, users, subjects }) => {
     const { setTitle, title } = useNavStore();
     const [selectedUser, setSelectedUser] = useState(null); // State to track selected user for dialog
-    const [dialogOpen, setDialogOpen] = useState(false); // State to track dialog open/close
+    // const [dialogOpen, setDialogOpen] = useState(false); // State to track dialog open/close
 
     const handleClick = (item) => {
         setTitle(item);
     };
 
-    const handleOpenDialog = (user) => {
+    const handleOpenProfile = (user) => {
         setSelectedUser(user); // Set the selected user
-        setDialogOpen(true); // Open the dialog
     };
 
-    const handleCloseDialog = () => {
-        setDialogOpen(false); // Close the dialog
-        setSelectedUser(null); // Clear the selected user
-    };
+    // const handleOpenDialog = (user) => {
+    //     setSelectedUser(user); // Set the selected user
+    //     setDialogOpen(true); // Open the dialog
+    // };
+
+    // const handleCloseDialog = () => {
+    //     setDialogOpen(false); // Close the dialog
+    //     setSelectedUser(null); // Clear the selected user
+    // };
 
     return (
         <div className="hidden md:flex flex-col w-64 bg-white text-primary pt-14 px-8 h-screen">
@@ -76,7 +81,7 @@ const NetworkDetailBar = ({ name, description, users, subjects }) => {
                                         {user.pseudo}
                                         
                                         <svg
-                                            onClick={() => handleOpenDialog(user)} // Open the dialog on click
+                                            onClick={() => handleOpenProfile(user)} // Open the dialog on click
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
                                             viewBox="0 0 24 24"
@@ -94,12 +99,15 @@ const NetworkDetailBar = ({ name, description, users, subjects }) => {
                 </div>
             </nav>
             {selectedUser && (
+                <Profile userId={selectedUser.userId} /> // Render Profile with the selected user's userId
+            )}
+            {/* {selectedUser && (
                 <ViewUserDialog
                     open={dialogOpen}
                     onClose={handleCloseDialog}
                     user={selectedUser} // Pass the selected user to the dialog
                 />
-            )}
+            )} */}
         </div>
     )
 }
