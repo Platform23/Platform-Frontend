@@ -46,7 +46,7 @@ const ProfileCard = ({ userId }) => {
                 </div>
 
                 {/* Edit profile button, only shown if currentUserId matches userId */}
-                {currentUserId !== userId && (
+                {currentUserId === userId && (
                     <div className="w-full lg:w-1/9 px-0 lg:order-3 lg:text-right lg:self-center">
                         <div className="py-6 px-3 mt-32 sm:mt-0">
                             <button
