@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useNavStore from "../../store/navStore";
+import { useNavigate } from 'react-router-dom';
 import ViewUserDialog from '../dialogBox/ViewUserDialog'
 import Profile from '../../pages/Profile'
 
@@ -8,13 +9,19 @@ const NetworkDetailBar = ({ name, description, users, subjects }) => {
     const { setTitle, title } = useNavStore();
     const [selectedUser, setSelectedUser] = useState(null); // State to track selected user for dialog
     // const [dialogOpen, setDialogOpen] = useState(false); // State to track dialog open/close
+    const navigate = useNavigate();
+
 
     const handleClick = (item) => {
         setTitle(item);
     };
 
     const handleOpenProfile = (user) => {
-        setSelectedUser(user); // Set the selected user
+        console.log(user)
+        console.log(user.pseudo)
+        // setSelectedUser(user); // Set the selected user
+        // Navigate to the profile page of the selected user
+        navigate(`/profil/${user.uuid}`)
     };
 
     // const handleOpenDialog = (user) => {
@@ -107,9 +114,9 @@ const NetworkDetailBar = ({ name, description, users, subjects }) => {
                     </ul>
                 </div>
             </nav>
-            {selectedUser && (
+            {/* {selectedUser && (
                 <Profile userId={selectedUser.userId} /> // Render Profile with the selected user's userId
-            )}
+            )} */}
             {/* {selectedUser && (
                 <ViewUserDialog
                     open={dialogOpen}

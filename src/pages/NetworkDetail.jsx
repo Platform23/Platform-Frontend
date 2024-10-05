@@ -59,7 +59,8 @@ const NetworkDetail = () => {
                             name={network.name}
                             description={network.description}
                             users={network.users}
-                            subjects={network.subjects} />
+                            subjects={network.subjects} 
+                        />
                     </div>
                 </div>
             }

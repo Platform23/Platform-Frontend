@@ -39,15 +39,15 @@ const ProfileCard = ({ userId }) => {
                         <img
                             alt="avatar"
                             src={user.avatar ? `${API_BASE_URL}/uploads/avatars/${user.avatar}` : `${userIcon}`}
-                            className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
+                            className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-20 -ml-10 lg:-ml-16"
                             style={{ maxWidth: "150px", maxHeight: "150px", objectFit: "cover" }}
                         />
                     </div>
                 </div>
 
                 {/* Edit profile button, only shown if currentUserId matches userId */}
-                {currentUserId === userId && (
-                    <div className="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
+                {currentUserId !== userId && (
+                    <div className="w-full lg:w-1/9 px-0 lg:order-3 lg:text-right lg:self-center">
                         <div className="py-6 px-3 mt-32 sm:mt-0">
                             <button
                                 onClick={handleOpen}
@@ -80,18 +80,20 @@ const ProfileCard = ({ userId }) => {
 
             {/* User personal information */}
             <div className="text-center">
-                <h3 className="text-3xl font-semibold leading-normal mb-2 text-primary">
+                <h3 className="text-3xl font-semibold leading-normal mb-1 text-primary">
                     {user.pseudo}
                 </h3>
-                <div className="text-lg leading-normal mb-2 text-primary font-bold">
+                {/* <div className="text-lg leading-normal mb-2 text-primary font-bold">
                     <i className="fas fa-map-marker-alt mr-2 text-lg text-gray-500"></i>{" "}
                     {user.email}
-                </div>
-                <div className="text-lg mb-3 text-primary mt-5">
+                </div> */}
+                <div className="text-lg mb-3 text-primary mt-2">
                     <i className="fas fa-briefcase mr-2 text-lg text-gray-500"></i>
                     {user.profession ?? ''}
                 </div>
             </div>
+
+            
         </div>
     )
 }

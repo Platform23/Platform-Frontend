@@ -26,11 +26,10 @@ const Sidebar = () => {
     const { setTitle, title } = useNavStore();
     const { logout, user } = useContext(AuthContext);
     const [error, setError] = useState(null);
-    const nagivate = useNavigate();
 
     const handleClick = (item) => {
         setTitle(item.name);
-        nagivate(item.href);
+        navigate(item.href);
     };
 
     const handleLogout = async () => {
