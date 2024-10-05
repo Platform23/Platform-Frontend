@@ -5,8 +5,12 @@ import SkillsSection from "../components/profile/SkillsSection";
 import { useUserProfile } from "../hooks/useUserProfile";
 import { useParams } from "react-router-dom";
 
-const Profile = () => {
-    const { userId } = useParams()
+const Profile = ({ userId: propUserId }) => {
+    // const { userId } = useParams()
+    // Use userId from params only if it's not provided as a prop
+    const { userId: paramUserId } = useParams();
+    const userId = propUserId || paramUserId;
+
     const { user, loading } = useUserProfile(userId);
 
     // if (loading) {

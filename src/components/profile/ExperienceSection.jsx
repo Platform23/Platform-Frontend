@@ -3,9 +3,11 @@ import { MdAdd } from "react-icons/md";
 import ExperienceDialog from "../dialogBox/ExperienceDialog";
 import ExperienceCard from "../cards/ExperienceCard"
 import { useUserProfile } from "../../hooks/useUserProfile";
+import { useParams } from "react-router-dom";
 
 
 const ExperienceSection = ({ userId }) => {
+    const { currentUserId } = useParams()
     const { loading, user} = useUserProfile(userId);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -33,9 +35,12 @@ const ExperienceSection = ({ userId }) => {
                     <h2 className="mb-4 text-lg leading-relaxed text-primary font-bold font-montserrat">
                         Expériences Professionnelles
                     </h2>
-                    <button onClick={handleOpen} className="justify-end">
-                        <MdAdd className="w-6 h-6 text-primary" />
-                    </button>
+                    {/* Experience button only shown if currentUserId matches userId */}
+                    {currentUserId === userId &&(
+                        <button onClick={handleOpen} className="justify-end">
+                            <MdAdd className="w-6 h-6 text-primary" />
+                        </button>
+                    )}
                 </div>
                 
                 {(
