@@ -85,7 +85,7 @@ export const networks = [
     
 ]
 
-For production
+// For production
 export const API_BASE_URL = "https://api.platformht.com/api";
 export const BASE_URL = "https://api.platformht.com";
 
