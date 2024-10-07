@@ -3,15 +3,18 @@ import ProfileCard from "../components/cards/ProfileCard"
 import ExperienceSection from "../components/profile/ExperienceSection";
 import SkillsSection from "../components/profile/SkillsSection";
 import { useUserProfile } from "../hooks/useUserProfile";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 
 const Profile = ({ userId: propUserId }) => {
     // const { userId } = useParams()
     // Use userId from params only if it's not provided as a prop
     const { userId: paramUserId } = useParams();
     const userId = propUserId || paramUserId;
-
+    const location = useLocation(); // Access location to retrieve state
+    // Retrieve viewingOtherProfile from location state, defaulting to false if not provided
+    const viewingOtherProfile = location.state?.viewingOtherProfile || false;
     const { user, loading } = useUserProfile(userId);
+
 
     // if (loading) {
     //     // return;
@@ -31,6 +34,7 @@ const Profile = ({ userId: propUserId }) => {
                         <div className="px-6">
                             <ProfileCard
                                 userId={userId}
+                                viewingOtherProfile={viewingOtherProfile}
                             />
 
                             <ExperienceSection
