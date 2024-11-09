@@ -22,16 +22,21 @@ export const Profile = {
 };
 
 export const communityProfile = [
-    { value: 1, label: "Utilisateur / Utilisatrice (Étudiant.e ; Chercheur.e…)", },
-    { value: 2, label: "Volontaire / Bénévole", },
-    { value: 3, label: "Réparateur.trice", },
-    { value: 4, label: "Fab-manager", },
-    { value: 5, label: "Community manager", },
-    { value: 6, label: "Volontaire / Bénévole", },
-    { value: 7, label: "Logisticien.ne", },
-    { value: 8, label: "Développeur.euse d'interfaces", },
-    { value: 9, label: "Designer/ Programmeur.euse" },
-    { value: 10, label: "Concepteur.trice de produits technologiques", },
+    { value: 1, label: "Représentant d’une institution académique ou d’un centre de formation professionnelle", },
+    { value: 2, label: "Hacker pour atelier technique", },
+    { value: 3, label: "Artisans ou Makers", },
+    { value: 4, label: "Acteurs de communautés open source hardware", },
+    { value: 5, label: "Formateurs", },
+    { value: 6, label: "Technoshops ou TechHub", },
+    { value: 7, label: "Les bibliothécaires", },
+    { value: 8, label: "Les réparateurs", },
+    { value: 9, label: "Industries - sponsors- Logisticiens et partenaires" },
+    { value: 10, label: "Community managers et animateurs de communauté", },
+    { value: 11, label: "Fab Manager", },
+    { value: 12, label: "Equipe administrative", },
+    { value: 13, label: "Utilisateurs / Utilisatrices - Membres de la communauté", },
+    { value: 14, label: "Stagiares / Rédisents", },
+    { value: 15, label: "Contributeurs", },
 ];
 
 export const communities = [
@@ -48,13 +53,35 @@ export const communities = [
 ]
 
 export const competences = [
-    { value: 1, label: "Gestion de l'information et des médias numériques", },
-    { value: 2, label: "Communication et collaboration numériques", },
-    { value: 3, label: "Pensée computationnelle et critique", },
-    { value: 4, label: "Insertion et développement professionnel numérique", },
-    { value: 5, label: "Innovation et création numériques", },
-    { value: 6, label: "Gestion et pilotage de projets collaboratifs", },
-    { value: 7, label: "Accompagnement et formation", },
+    { value: 1, label: "Connaissance des outils de fabrication numérique", },
+    { value: 2, label: "Programmation et développement de logiciels", },
+    { value: 3, label: "Compréhension et application de la blockchain et des smart contracts", },
+    { value: 4, label: "Compétences en intelligence artificielle y compris le traitement du langage naturel", },
+    { value: 5, label: "Compétences d’analyse de données", },
+    { value: 6, label: "Cybersécurité", },
+    { value: 7, label: "Automatisation des processus", },
+    { value: 8, label: "Veille technologique ", },
+    { value: 9, label: "Création de contenu numérique", },
+    { value: 10, label: "Compétences en communication et en promotion de projets", },
+    { value: 11, label: "Conception et design web", },
+    { value: 12, label: "Gestion de projets numériques", },
+    { value: 13, label: "Artisanat numérique et traditionnelle", },
+    { value: 14, label: "Electronique", },
+    { value: 15, label: "Informatique", },
+    { value: 16, label: "Autres compétences techniques", },
+    { value: 17, label: "Communication", },
+    { value: 18, label: "Travail d'équipe", },
+    { value: 19, label: "Utilisation des outils de travail collaboratif", },
+    { value: 20, label: "Flexibilité et adaptabilité", },
+    { value: 21, label: "Gestion Personnelle", },
+    { value: 22, label: "Mentorat et accompagnement", },
+    { value: 23, label: "Esprit critique", },
+    { value: 24, label: "Capacité à créer et maintenir un réseau professionnel", },
+    { value: 25, label: "Engagement et persévérance", },
+    { value: 26, label: "Compétences en Leadership et Gestion", },
+    { value: 27, label: "Créativité et Innovation", },
+    { value: 28, label: "Compétences Éthiques et Sociales", },
+
 ]
 
 export const networks = [
