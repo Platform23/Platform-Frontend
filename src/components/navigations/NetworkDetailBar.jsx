@@ -8,8 +8,11 @@ const NetworkDetailBar = ({ name, description, users, subjects }) => {
     const navigate = useNavigate();
 
 
-    const handleClick = (item) => {
-        setTitle(item);
+    const handleClick = (subject) => {
+        // setTitle(item);
+        if (subject?.link) {
+            window.location.href = subject.link;
+        }
     };
 
     const handleOpenProfile = (user) => {
