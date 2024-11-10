@@ -11,7 +11,7 @@ const NetworkDetailBar = ({ name, description, users, subjects }) => {
     const handleClick = (subject) => {
         // setTitle(item);
         if (subject?.link) {
-            window.location.href = subject.link;
+            window.open(subject.link, '_blank');
         }
     };
 
