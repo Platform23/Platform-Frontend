@@ -5,7 +5,8 @@ import NetworkCardShimmer from "../components/cards/NetworkCardShimmer";
 import { logoLarge } from '../assets/images';
 import { platformDesc } from "../utils/constants"
 import Policy from '../utils/Politique_de_confidentialité_Platform.pdf'
-
+import Skills from '../utils/Platform_competences.pdf'
+import Roles from '../utils/Platform_roles.pdf'
 
 
 const Home = () => {
@@ -62,6 +63,10 @@ const Home = () => {
         <p className="block text-md font-semibold text-primary">
           <a href={Policy} target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline">Politique de confidentialité</a> des données de Platform
         </p>
+        <div className="mt-5 block text-md font-semibold text-primary">
+            Cliquez ici pour plus d'informations sur les <a href={Skills} target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline">compétences </a>
+            et les <a href={Roles} target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline"> rôles. </a>
+        </div> 
       </div>
     </section>
 
