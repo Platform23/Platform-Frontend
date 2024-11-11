@@ -120,7 +120,7 @@ const SignUp = () => {
                             />
 
                             <div className="mt-5 block text-md font-semibold text-primary">
-                                Cliquez ici pour plus d'informations sur les <a href={Skills} target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline">compétences</a>
+                                Cliquez ici pour plus d'informations sur les <a href={Skills} target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline">compétences </a>
                                 et les <a href={Roles} target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline"> rôles. </a>
                             </div> 
 
