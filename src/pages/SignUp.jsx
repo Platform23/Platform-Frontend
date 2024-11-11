@@ -10,6 +10,7 @@ import { useCallback, useContext, useState } from "react"
 import AuthContext from '../hooks/AuthProvider';
 import ErrorModal from '../components/modal/ErrorModal';
 import Skills from '../utils/Platform_competences.pdf'
+import Roles from '../utils/Platform_roles.pdf'
 
 
 const SignUp = () => {
@@ -119,7 +120,8 @@ const SignUp = () => {
                             />
 
                             <div className="mt-5 block text-md font-semibold text-primary">
-                                Cliquez ici pour plus d'informations sur les <a href={Skills} target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline">compétences.</a>
+                                Cliquez ici pour plus d'informations sur les <a href={Skills} target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline">compétences</a>
+                                et les <a href={Roles} target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline"> rôles. </a>
                             </div> 
 
                             <TermsOfUse agree={agree} setAgree={setAgree} />
