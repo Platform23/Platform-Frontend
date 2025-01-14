@@ -1,10 +1,7 @@
 export const platformDesc = `
- plateforme numérique open source capable de soutenir et d’accompagner le développement de 
- projets collaboratifs en communautés de pratique. \n\n
+ plateforme numérique open source capable de soutenir et d’accompagner le développement de projets collaboratifs en communautés de pratique. \n\n
 
-Bien plus qu’un espace numérique de collaboration, le dispositif s’inspire de 
-l’approche théorique des communautés de pratique et d’un modèle de travail communautaire 
-particulier appelé kolòn.
+Bien plus qu’un espace numérique de collaboration, le dispositif s’inspire de l’approche théorique des communautés de pratique et d’un modèle de travail communautaire particulier appelé kolòn.
 `;
 export const Profile = {
     user: {
