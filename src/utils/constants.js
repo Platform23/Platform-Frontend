@@ -1,7 +1,10 @@
 export const platformDesc = `
- est un outil numérique open source visant à servir de guide pour l’amélioration et l’évaluation des compétences collaboratives en communautés de pratique. Inspirée d’un modèle d’organisation de travail nommé kolòn, qui désigne les stratégies d’intégration et de mode de fonctionnement en réseaux dans les communautés de réparation des technologies numériques en Haïti. Ce mode de travail incarne une philosophie basée sur l’économie de partage, l’entraide, la collaboration, l’engagement mutuel, l’accompagnement, le mentorat et la réciprocité. \n\n
+ plateforme numérique open source capable de soutenir et d’accompagner le développement de 
+ projets collaboratifs en communautés de pratique. \n\n
 
-Ainsi, bien plus qu'un simple espace en ligne, cet outil veut être un véritable catalyseur de production et de partage de savoirs autour du Numérique Social! Le dispositif résultant servira de guide aux professionnel.le.s évoluant dans le secteur de la fabrication numérique pour la conception ou l’exécution de projet collaboratif, de partenariat, ou de formation en entreprise.
+Bien plus qu’un espace numérique de collaboration, le dispositif s’inspire de 
+l’approche théorique des communautés de pratique et d’un modèle de travail communautaire 
+particulier appelé kolòn.
 `;
 export const Profile = {
     user: {
