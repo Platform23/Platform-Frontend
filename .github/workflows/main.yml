@@ -6,7 +6,7 @@ on:
       - main  
 
 jobs:
- build:
+  build:
     runs-on: ubuntu-24.04
     name: Continuous Integration
     steps:
@@ -22,6 +22,8 @@ jobs:
       run: npm ci
 
     - name: Build React app
+      env:
+        API_KEY: ${{ secrets.ARGO_API_KEY }} # Inject the API key here
       run: npm run build
           
     - name: Login to DockerHub
@@ -38,7 +40,7 @@ jobs:
         push: ${{ github.event_name != 'pull_request' }}
         tags: platformht/frontend-image:latest
 
- deploy:
+  deploy:
     runs-on: ubuntu-24.04
     name: Continuous Deployment
     needs: [build]
@@ -52,4 +54,3 @@ jobs:
           script: |
             cd /home/stacks
             docker service update --image platformht/frontend-image:latest traefik_frontend
-            
