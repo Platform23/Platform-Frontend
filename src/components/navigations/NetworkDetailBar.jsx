@@ -1,6 +1,52 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import useNavStore from "../../store/navStore";
 import { useNavigate } from 'react-router-dom';
+
+const Chat = () => {
+    useEffect(() => {
+        // Dynamically load the ArgoChat widget from the CDN
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/@hestia.ai/argo-chat@1.0.4/dist/argo-chat.iife.js'; // CDN URL
+        script.async = true;
+        script.onload = () => {
+            const chat = new window.ArgoChat({
+                title: 'AI Assistant',
+                apiKey: process.env.API_KEY, // Replace with your actual API key
+                greeting: 'Welcome! How can I help you today?',
+                position: 'bottom-right',
+                placeholder: 'Type your message...',
+                theme: {
+                    primaryColor: '#007bff',
+                    textColor: '#ffffff',
+                    fontFamily: 'Inter, sans-serif',
+                },
+                toggleButton: {
+                    icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>',
+                    icon_size: '24px',
+                    btn_size: '56px',
+                },
+            });
+
+            // Add the chat widget to the body
+            document.body.appendChild(chat);
+
+            return () => {
+                // Clean up the chat widget when the component unmounts
+                chat.remove();
+            };
+        };
+
+        // Append the script tag to load the ArgoChat widget
+        document.body.appendChild(script);
+
+        return () => {
+            // Cleanup when the component unmounts
+            document.body.removeChild(script);
+        };
+    }, []);
+
+    return null; // The chat widget is directly appended to the body
+};
 
 
 const NetworkDetailBar = ({ name, description, users, subjects }) => {
@@ -111,6 +157,10 @@ const NetworkDetailBar = ({ name, description, users, subjects }) => {
                             ))
                         }
                     </ul>
+                </div>
+
+                <div className="py-4">
+                    <Chat/>
                 </div>
             </nav>
         </div>
