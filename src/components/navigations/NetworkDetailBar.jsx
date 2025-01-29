@@ -13,7 +13,7 @@ const Chat = () => {
 
                 const chat = new ArgoChat({
                     title: 'AI Assistant',
-                    apiKey: process.env.API_KEY, // Replace with your actual API key
+                    apiKey: 'QsN3tOghTPEk4805HK0tIs7GNtBjUsJWltUVb0p-C3c', // Replace with your actual API key
                     apiEndpoint: 'https://api.argo.hestia.ai/v1/chat/completions',
                     greeting: "Bienvenue! Comment puis'je vous aider?",
                     position: 'bottom-right',
