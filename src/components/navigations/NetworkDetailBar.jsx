@@ -12,7 +12,7 @@ const Chat = () => {
                 console.log('-------------------ArgoChat module loaded------------------');
 
                 const chat = new ArgoChat({
-                    title: 'AI Assistant',
+                    title: 'Assistant IA',
                     apiKey: 'QsN3tOghTPEk4805HK0tIs7GNtBjUsJWltUVb0p-C3c', // Replace with your actual API key
                     apiEndpoint: 'https://api.argo.hestia.ai/v1/chat/completions',
                     greeting: "Bienvenue! Comment puis'je vous aider?",
