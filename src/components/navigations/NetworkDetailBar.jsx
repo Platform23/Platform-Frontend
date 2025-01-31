@@ -93,7 +93,7 @@ const NetworkDetailBar = ({ name, description, users, subjects }) => {
             <nav className="flex flex-col flex-1 overflow-y-auto pt-10">
                 <div className="py-4">
                     <h3 className="font-montserrat text-xl font-semibold leading-snug tracking-normal">
-                        Sujets
+                        Projets
                     </h3>
 
                     <ul className="font-roboto text-base font-semibold leading-relaxed text-inherit flex-1 gap-2">
