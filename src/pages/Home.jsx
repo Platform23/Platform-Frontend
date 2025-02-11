@@ -4,7 +4,7 @@ import { useNetworks } from "../hooks/useNetworks";
 import NetworkCardShimmer from "../components/cards/NetworkCardShimmer";
 import { logoLarge } from '../assets/images';
 import { platformDesc } from "../utils/constants"
-import Policy from '../utils/Politique_de_confidentialité_Platform_v3.pdf'
+import {Policy} from '../utils/Politique_de_confidentialité_Platform.pdf'
 import Skills from '../utils/Platform_competences.pdf'
 import Roles from '../utils/Platform_roles.pdf'
 
